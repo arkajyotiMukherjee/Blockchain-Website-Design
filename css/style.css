@@ -857,11 +857,22 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 body {
+  margin: 0;
   font-family: "Open Sans", sans-serif; }
 
 h1 {
-  color: #ccc;
-  weight: 300; }
+  color: #383c42;
+  weight: 300;
+  user-select: none; }
+
+p {
+  color: black;
+  user-select: none; }
+
+hr {
+  z-index: 4;
+  height: 2px;
+  background-color: black; }
 
 figure {
   margin: auto; }
@@ -869,11 +880,12 @@ figure {
 .content {
   position: relative;
   background: white;
-  margin-bottom: 400px;
-  overflow: hidden; }
+  margin-bottom: 315px;
+  overflow: hidden;
+  z-index: 3; }
   .content article {
     padding: 100px 0;
-    max-width: 640px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center; }
 
@@ -882,39 +894,40 @@ img {
 
 .bird-box {
   position: relative;
-  height: 600px;
-  background-image: url(/Parallax-Practice/images/bird-bg.jpg);
+  height: 687px;
   background-size: auto 600px;
+  background-color: #3e4042;
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
-  z-index: 3; }
+  z-index: 4; }
 
 .logo {
-  height: 100px;
+  height: 250px;
   width: 100%;
-  background-image: url(/Parallax-Practice/images/black-bird-logo.svg);
+  background-size: contain;
+  background-image: url(/images/logo_trans.png);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 50%;
+  top: 45%;
   margin-top: -50px; }
 
 .fore-bird {
   width: 960px;
   height: 733px;
-  background-image: url(/Parallax-Practice/images/fore-bird.png);
+  background-image: url(/images/Longcat.gif);
   background-repeat: no-repeat;
   background-position: right bottom;
   position: absolute;
   left: 50%;
   margin-left: -480px;
-  top: 380px; }
+  top: 250px; }
 
 .back-bird {
   width: 960px;
   height: 298px;
-  background-image: url(/Parallax-Practice/images/back-bird.png);
+  background-image: url(/images/back-bird.png);
   background-repeat: no-repeat;
   background-position: top left;
   position: absolute;
@@ -953,10 +966,10 @@ img {
       transition: all 0.3s ease-in-out; }
 
 .large-window {
-  height: 640px;
+  height: 700px;
   margin-top: 100px;
   border-radius: 50%;
-  background-image: url(/Parallax-Practice/images/model2.jpg);
+  background-image: url(/images/cat-coin.jpg);
   background-repeat: repeat-y;
   background-position: center 0px;
   background-attachment: fixed;
@@ -977,7 +990,8 @@ img {
       color: white;
       font-weight: 100;
       font-size: 50px;
-      line-height: 1.2; }
+      line-height: 1.2;
+      user-select: none; }
       .large-window .window-tint .promo-text strong {
         display: block;
         font-size: 30px; }
@@ -998,7 +1012,8 @@ img {
           color: black; }
 
 .blog-posts {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
   .blog-posts .post {
     border: 1px solid #e1e1e1;
     padding: 20px 20px 0;
@@ -1012,18 +1027,103 @@ img {
     transform: translate(-100px, 20px); }
 
 footer {
-  background: black;
+  background-color: #000816;
+  background-image: url(/images/pattern_dark.png);
   color: white;
-  padding: 40px 0;
+  padding-bottom: 40px;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: -1; }
   footer .footer-stuff {
-    max-width: 640px;
+    max-width: 700px;
     margin: 0 auto; }
   footer a {
     color: white;
     text-decoration: none; }
+
+.cap {
+  margin-top: 25px;
+  color: white;
+  text-align: left; }
+
+.cap > ul > li {
+  text-align: left; }
+
+.footer-para {
+  text-align: left;
+  color: white; }
+
+canvas {
+  display: block; }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: #fff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  top: 0;
+  left: 0; }
+  #particles-js .particle-container {
+    position: absolute;
+    z-index: -1;
+    left: 10%;
+    user-select: none; }
+
+input {
+  color: black; }
+
+.tab-box {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 10px 90px;
+  background: #000816;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "home product documents partners blog contact"; }
+
+h1, p {
+  z-index: 4;
+  position: relative; }
+
+.tabs {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 12px;
+  border-radius: 0 0 15px 15px;
+  font-size: 16px;
+  font-weight: 800; }
+
+a {
+  text-decoration: none; }
+
+.tabs:hover {
+  background-color: #f1f1f1;
+  color: #000816; }
+
+.home {
+  grid-area: home; }
+
+.product {
+  grid-area: product; }
+
+.documents {
+  grid-area: documents; }
+
+.partners {
+  grid-area: partners; }
+
+.blog {
+  grid-area: blog; }
+
+.contact {
+  grid-area: contact; }
 
 /*# sourceMappingURL=style.css.map */

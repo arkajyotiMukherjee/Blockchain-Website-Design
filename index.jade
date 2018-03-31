@@ -2,12 +2,15 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-    title BlackBird Co.
+    title Lattice Protocol
     meta(name="description", content="")
     meta(name="author", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="css/style.css")
     link(rel="icon", type="image/png", href="images/fore-bird.png")
+    script(src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
+    script(src="https://threejs.org/examples/js/libs/stats.min.js")
+
   
   body
       
@@ -16,111 +19,134 @@ html(lang="en")
       .logo
       .fore-bird
 
-          
+    div#myTab.tab-box
+      a(href="index.html") <span class="tabs home">Home</span>
+      a(href="product.html") <span class="tabs product">Product</span>
+      a(href="#") <span class="tabs documents">Documents</span>
+      a(href="#") <span class="tabs partners">Partners</span>
+      a(href="#") <span class="tabs blog">Blog</span>
+      a(href="contact.html") <span class="tabs contact">Contact</span>
+
+
+    //- Main section 
     section.content
       
       article
         
-        h1 Clothing Store
-        
-        hr
-        
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+    
+        h1 What is Lattice Protocol?
         
         hr
 
-        .clothes-pics
-          .row.img-row
-            figure.columns.four
-              img(src="images/model1.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-
-            figure.columns.four
-              img(src="images/model2.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-            figure.columns.four
-              img(src="images/model3.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-
-          .row.img-row
-            figure.columns.four
-              img(src="images/model2.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-            figure.columns.four
-              img(src="images/model3.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-            figure.columns.four
-              img(src="images/model1.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-          
-          .row.img-row
-            figure.columns.four
-              img(src="images/model3.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-            figure.columns.four
-              img(src="images/model2.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-            figure.columns.four
-              img(src="images/model1.jpg")
-              figcaption BlackBird Sweater - <strong>$135</strong>
-              
-
+        div#particles-js
+          div.particle-container
+            img(src="images/back-bird.png", alt="")
+        
+        p.lattice-intro Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+        
         hr
 
+        
         .large-window
           .window-tint
-            .promo-text Fall Suits
-              strong <span>from </span>$99
-              a(href="").window-cta Show Now
+            .promo-text Token Sale
+              strong <span>from </span>1/2/2018
+              a(href="").window-cta Buy Tokens
+
+        hr
+
+        h1 Our Blog Posts
+
+        hr
 
         .blog-posts.row
           .post.columns.four.post-1
             h5 Post Title 1
-            img(src="images/model1.jpg", alt="1st image")
+            img(src="images/cat-mem2.jpg", alt="1st image")
             p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             p: a.button(href="") Read More
 
           .post.columns.four.post-2
             h5 Post Title 2
-            img(src="images/model2.jpg", alt="2nd image")
+            img(src="images/cat-mem4.jpg", alt="2nd image")
             p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             p: a.button(href="") Read More
 
           .post.columns.four.post-3
             h5 Post Title 3
-            img(src="images/model3.jpg", alt="3rd image")
+            img(src="images/cat-mem6.jpg", alt="3rd image")
             p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             p: a.button(href="") Read More
 
+        hr
         
+        h1 Team Members
+
+        hr
+
+        .clothes-pics
+          .row.img-row
+            figure.columns.four
+              img(src="images/cat-mem1.jpg")
+              figcaption BlockChain Developer - <br> <strong>Mr.Somebody</strong>
+
+            figure.columns.four
+              img(src="images/cat-mem2.jpg")
+              figcaption Backend developer - <br> <strong>Mr.Black Hat</strong>
+              
+            figure.columns.four
+              img(src="images/cat-mem3.jpg")
+              figcaption FrontEnd Developer - <br> <strong>Mr.Designer</strong>
+              
+
+          .row.img-row
+            figure.columns.four
+              img(src="images/cat-mem4.jpg")
+              figcaption Marketing - <br> <strong>Mr.Market</strong>
+              
+            figure.columns.four
+              img(src="images/cat-mem5.jpg")
+              figcaption Other Team - <br> <strong>Mr.Person</strong>
+              
+            figure.columns.four
+              img(src="images/cat-mem6.jpg")
+              figcaption Other Team - <br> <strong>Mr.Person</strong>
+              
+          
+          .row.img-row
+            figure.columns.four
+              img(src="images/cat-mem3.jpg")
+              figcaption Other Team - <br> <strong>Mr.Person</strong>
+              
+            figure.columns.four
+              img(src="images/cat-mem5.jpg")
+              figcaption Other Team - <br> <strong>Mr.Person</strong>
+              
+            figure.columns.four
+              img(src="images/cat-mem1.jpg")
+              figcaption Other Team - <br> <strong>Mr.Person</strong>
+
 
     footer
       .row.footer-stuff
-        .columns.three
+      
+        .columns.three.cap
           strong FIND US ON
           ul
-            li: a(href="") Twitter
-            li: a(href="") Facebook
-            li: a(href="") Instagram
-            li: a(href="") Pinterest
+            li: a(href="") Telegram
+            li: a(href="") Reddit
+            li: a(href="") Medium
+            li: a(href="") LinkedIn
 
-        .columns.three
-          strong SISTER SHOPS
+        .columns.three.cap
+          strong MORE LINKS
           ul
-            li: a(href="") Red Robin
-            li: a(href="") Emerald Eagle
-            li: a(href="") Crimson Crane
-            li: a(href="") Auburn Abbott
+            li: a(href="") Facebook
+            li: a(href="") Twitter
+            li: a(href="") Instagram
 
-        .columns.six
-          p <strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.
+        .columns.six.cap
+          p.footer-para <strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.
           
           form.row
           .columns.eight
@@ -131,3 +157,4 @@ html(lang="en")
 
     script(src="js/jquery-2.1.3.min.js")
     script(src="js/functions.js")
+

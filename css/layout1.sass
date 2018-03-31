@@ -1,11 +1,22 @@
 // Base Styles
 
 body
+  margin: 0
   font-family: "Open Sans", sans-serif
 
 h1
-  color: #ccc
+  color: #383c42
   weight: 300
+  user-select: none
+
+p
+  color: black
+  user-select: none
+
+hr
+  z-index: 4
+  height: 2px
+  background-color: black
 
 figure
   margin: auto
@@ -13,12 +24,13 @@ figure
 .content
   position: relative
   background: white
-  margin-bottom: 400px
+  margin-bottom: 315px
   overflow: hidden
+  z-index: 3
 
   article
     padding: 100px 0
-    max-width: 640px
+    max-width: 700px
     margin: 0 auto
     text-align: center
 
@@ -31,44 +43,45 @@ img
 
 .bird-box
   position: relative
-  height: 600px
+  height: 687px
   background: 
-    image: url(/Parallax-Practice/images/bird-bg.jpg)
     size: auto 600px
+    color: #3e4042
+    //image: url(/images/bird-bg.jpg)
     position: top center
     attachment: fixed
   overflow: hidden
-  z-index: 3
+  z-index: 4
 
 .logo
-  height: 100px
+  height: 250px
   width: 100%
   background:
-    image: url(/Parallax-Practice/images/black-bird-logo.svg)
+    size: contain
+    image: url(/images/logo_trans.png)
     position: center
     repeat: no-repeat
   position: absolute
-  top: 50%
+  top: 45%
   margin-top: -50px
 
 .fore-bird
   width: 960px
   height: 733px
   background: 
-    //color: transparentize(pink, 0.4)
-    image: url(/Parallax-Practice/images/fore-bird.png)
+    image: url(/images/Longcat.gif)
     repeat: no-repeat
     position: right bottom
   position: absolute
   left: 50%
   margin-left: -480px
-  top: 380px
+  top: 250px
 
 .back-bird
   width: 960px
   height: 298px
   background: 
-    image: url(/Parallax-Practice/images/back-bird.png)
+    image: url(/images/back-bird.png)
     repeat: no-repeat
     position: top left
   position: absolute
@@ -114,11 +127,11 @@ img
 
 //periscope
 .large-window
-  height: 640px
+  height: 700px
   margin-top: 100px
   border-radius: 50%
   background: 
-    image: url(/Parallax-Practice/images/model2.jpg)
+    image: url(/images/cat-coin.jpg)
     repeat: repeat-y
     position: center 0px
     attachment: fixed
@@ -142,6 +155,7 @@ img
       font-weight: 100
       font-size: 50px
       line-height: 1.2
+      user-select: none
 
       strong
         display: block
@@ -171,6 +185,7 @@ img
 
 .blog-posts
   margin-top: 100px
+  margin-bottom: 100px
 
   .post
     border: 1px solid #e1e1e1
@@ -190,18 +205,121 @@ img
 //footer
 
 footer
-  background: black
+  background:
+    color: #000816
+    image: url(/images/pattern_dark.png)
   color: white
-  padding: 40px 0
+  padding-bottom: 40px
   position: fixed
   bottom: 0
   width: 100%
   z-index: -1
 
   .footer-stuff
-    max-width: 640px
+    max-width: 700px
     margin: 0 auto
 
   a 
     color: white
     text-decoration: none
+
+.cap
+  margin-top: 25px
+  color: white
+  text-align: left
+
+.cap > ul > li
+  text-align: left
+
+.footer-para
+  text-align: left
+  color: white
+
+
+
+
+// particle js styles
+// reset
+
+canvas 
+  display: block
+
+
+// particles.js container
+
+#particles-js 
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 0.9
+  background-color: #fff
+  //background-image: url("/images/pattern_light.png")
+  background-image: url("")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50% 50%
+  top: 0
+  left: 0
+
+  .particle-container
+    position: absolute
+    z-index: -1
+    left: 10%
+    user-select: none
+
+
+input
+  color: black
+
+
+
+//Tabs
+
+.tab-box
+  display: block
+  position: sticky
+  top: 0
+  z-index: 5
+  padding: 10px 90px
+  background: #000816
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-areas: 'home product documents partners blog contact'
+
+
+h1,p
+  z-index: 4
+  position: relative
+
+.tabs
+  color: #f1f1f1
+  text-align: center
+  padding: 12px
+  border-radius: 0 0 15px 15px
+  font-size: 16px
+  font-weight: 800
+
+a
+  text-decoration: none
+
+.tabs:hover
+  background-color: #f1f1f1
+  color: #000816
+
+.home
+  grid-area: home
+
+.product
+  grid-area: product
+
+.documents
+  grid-area: documents
+
+.partners
+  grid-area: partners
+
+.blog
+  grid-area: blog
+
+.contact
+  grid-area: contact
