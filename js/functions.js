@@ -3,24 +3,24 @@ $(window).scroll(function(){
   
   //top parallax
   
-  $('.logo').css({
-      'transform' : 'translate(0px, ' + wScroll/6 + '%)'
+  $('.globe').css({
+      'transform' : 'translate(0px, ' + wScroll/10 + '%)'
   })
   
   $('.back-bird').css({
       'transform' : 'translate(0px, '+ wScroll/4 + '%)'
   })
 
-  $('.fore-bird').css({
-      'transform' : 'translate(0px, -'+ wScroll/40 + '%)'
+  $('.logo').css({
+      'transform' : 'translate(0px, -'+ wScroll/100 + '%)'
   })
 
-  if(wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)){
+  if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
 
-    $('.clothes-pics figure').each(function (i) {
+    $('.team figure').each(function (i) {
 
         setTimeout(function () {
-            $('.clothes-pics figure').eq(i).addClass('is-showing')
+            $('.team figure').eq(i).addClass('is-showing')
         }, (700 * Math.exp(i*0.14) - 700))   
     })
   }

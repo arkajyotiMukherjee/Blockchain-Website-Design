@@ -12,12 +12,12 @@
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   </head>
   <body>
-    <header class="bird-box">
+    <header class="head-box">
       <div class="back-bird"></div>
+      <div class="globe"></div>
       <div class="logo"></div>
-      <div class="fore-bird"></div>
     </header>
-    <div id="myTab" class="tab-box"><a href="index.html"><span class="tabs home">Home</span></a><a href="product.html"><span class="tabs product">Product</span></a><a href="#"><span class="tabs documents">Documents</span></a><a href="#"><span class="tabs partners">Partners</span></a><a href="#"><span class="tabs blog">Blog</span></a><a href="contact.html"><span class="tabs contact">Contact</span></a></div>
+    <div class="row tab-box"><a href="index.html" class="tabs"><span class="home">Home</span></a><a href="product.html" class="tabs"><span class="product">Product</span></a><a href="documents.html" class="tabs"><span class="documents">Documents</span></a><a href="#" class="tabs"><span class="partners">Partners</span></a><a href="#" class="tabs"><span class="blog">Blog</span></a><a href="contact.html" class="tabs"><span class="contact">Contact</span></a></div>
     <section class="content">
       <article>
         <h1>What is Lattice Protocol?</h1>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <hr>
-        <h1>Our Blog Posts</h1>
+        <h1>Blog Posts</h1>
         <hr>
         <div class="blog-posts row">
           <div class="post columns four post-1">
@@ -55,7 +55,45 @@
         <hr>
         <h1>Team Members</h1>
         <hr>
-        <div class="clothes-pics">
+        <div class="team">
+          <div class="row img-row">
+            <figure class="columns four"><img src="images/cat-mem1.jpg">
+              <figcaption>BlockChain Developer - <br> <strong>Mr.Somebody</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem2.jpg">
+              <figcaption>Backend developer - <br> <strong>Mr.Black Hat</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem3.jpg">
+              <figcaption>FrontEnd Developer - <br> <strong>Mr.Designer</strong></figcaption>
+            </figure>
+          </div>
+          <div class="row img-row">
+            <figure class="columns four"><img src="images/cat-mem4.jpg">
+              <figcaption>Marketing - <br> <strong>Mr.Market</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem5.jpg">
+              <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem6.jpg">
+              <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+            </figure>
+          </div>
+          <div class="row img-row">
+            <figure class="columns four"><img src="images/cat-mem3.jpg">
+              <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem5.jpg">
+              <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+            </figure>
+            <figure class="columns four"><img src="images/cat-mem1.jpg">
+              <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+            </figure>
+          </div>
+        </div>
+        <hr>
+        <h1>Our Advisors</h1>
+        <hr>
+        <div class="team">
           <div class="row img-row">
             <figure class="columns four"><img src="images/cat-mem1.jpg">
               <figcaption>BlockChain Developer - <br> <strong>Mr.Somebody</strong></figcaption>
@@ -111,13 +149,14 @@
         </div>
         <div class="columns six cap">
           <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
-          <form class="row"></form>
-          <div class="columns eight">
-            <input type="email" placeholder="Your Email" class="u-full-width">
-          </div>
-          <div class="columns four">
-            <input type="submit" value="SUMBIT" class="button-primary">
-          </div>
+          <form action="" class="row">
+            <div class="columns eight">
+              <input type="email" placeholder="Your Email" class="u-full-width">
+            </div>
+            <div class="columns four">
+              <input type="submit" value="SUMBIT" class="button-primary">
+            </div>
+          </form>
         </div>
       </div>
     </footer>

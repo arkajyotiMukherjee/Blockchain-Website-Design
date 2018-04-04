@@ -869,6 +869,9 @@ p {
   color: black;
   user-select: none; }
 
+h2 {
+  user-select: none; }
+
 hr {
   z-index: 4;
   height: 2px;
@@ -880,7 +883,7 @@ figure {
 .content {
   position: relative;
   background: white;
-  margin-bottom: 315px;
+  margin-bottom: 265px;
   overflow: hidden;
   z-index: 3; }
   .content article {
@@ -892,37 +895,38 @@ figure {
 img {
   max-width: 100%; }
 
-.bird-box {
+.head-box {
   position: relative;
   height: 687px;
   background-size: auto 600px;
-  background-color: #3e4042;
+  background-color: #000816;
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
   z-index: 4; }
 
-.logo {
-  height: 250px;
+.globe {
+  height: 600px;
   width: 100%;
   background-size: contain;
-  background-image: url(/images/logo_trans.png);
+  background-image: url(/images/globeImg.png);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 45%;
+  top: 12%;
   margin-top: -50px; }
 
-.fore-bird {
-  width: 960px;
-  height: 733px;
-  background-image: url(/images/Longcat.gif);
+.logo {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-image: url(/images/logographic.png);
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: bottom;
   position: absolute;
-  left: 50%;
-  margin-left: -480px;
-  top: 250px; }
+  left: 1.5%;
+  margin-left: -12px;
+  top: 500px; }
 
 .back-bird {
   width: 960px;
@@ -934,9 +938,9 @@ img {
   left: 50%;
   margin-left: -480px; }
 
-.clothes-pics {
+.team {
   margin-bottom: 100px; }
-  .clothes-pics figure {
+  .team figure {
     margin-bottom: 20px;
     position: relative;
     opacity: 0;
@@ -944,18 +948,18 @@ img {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     cursor: pointer; }
-    .clothes-pics figure.is-showing {
+    .team figure.is-showing {
       opacity: 1;
       transform: translateX(0px); }
-    .clothes-pics figure img {
+    .team figure img {
       display: block;
       transition: all 0.3s ease-in-out;
       transform: scale(1); }
-    .clothes-pics figure:hover figcaption {
+    .team figure:hover figcaption {
       left: 0%; }
-    .clothes-pics figure:hover img {
+    .team figure:hover img {
       transform: scale(1.1); }
-    .clothes-pics figure figcaption {
+    .team figure figcaption {
       position: absolute;
       bottom: 10px;
       left: -100%;
@@ -1081,12 +1085,12 @@ input {
 .tab-box {
   display: block;
   position: sticky;
+  text-align: center;
   top: 0;
-  z-index: 5;
-  padding: 10px 90px;
   background: #000816;
+  z-index: 5;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas: "home product documents partners blog contact"; }
 
 h1, p {
@@ -1096,7 +1100,8 @@ h1, p {
 .tabs {
   color: #f1f1f1;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
+  margin: 0 10px;
   border-radius: 0 0 15px 15px;
   font-size: 16px;
   font-weight: 800; }
@@ -1125,5 +1130,15 @@ a {
 
 .contact {
   grid-area: contact; }
+
+.post, .row > figure {
+  box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 1em rgba(0, 0, 0, 0.19) !important; }
+
+.post:hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important; }
+
+.tab-box {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 /*# sourceMappingURL=style.css.map */
