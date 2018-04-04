@@ -932,7 +932,7 @@ img {
   margin-left: -12px;
   top: 500px; }
 
-.back-bird {
+.back-img {
   width: 960px;
   height: 298px;
   background-image: url(/images/back-bird.png);
@@ -942,9 +942,9 @@ img {
   left: 50%;
   margin-left: -480px; }
 
-.team {
+.team, .advisors {
   margin-bottom: 100px; }
-  .team figure {
+  .team figure, .advisors figure {
     margin-bottom: 20px;
     position: relative;
     opacity: 0;
@@ -952,18 +952,18 @@ img {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     cursor: pointer; }
-    .team figure.is-showing {
+    .team figure.is-showing, .advisors figure.is-showing {
       opacity: 1;
       transform: translateX(0px); }
-    .team figure img {
+    .team figure img, .advisors figure img {
       display: block;
       transition: all 0.3s ease-in-out;
       transform: scale(1); }
-    .team figure:hover figcaption {
+    .team figure:hover figcaption, .advisors figure:hover figcaption {
       left: 0%; }
-    .team figure:hover img {
+    .team figure:hover img, .advisors figure:hover img {
       transform: scale(1.1); }
-    .team figure figcaption {
+    .team figure figcaption, .advisors figure figcaption {
       position: absolute;
       bottom: 10px;
       left: -100%;
@@ -1094,8 +1094,8 @@ input {
   background: #000816;
   z-index: 5;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "home product documents partners blog contact"; }
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "home product documents blog contact"; }
 
 .tabs {
   color: #f1f1f1;
@@ -1121,9 +1121,6 @@ a {
 
 .documents {
   grid-area: documents; }
-
-.partners {
-  grid-area: partners; }
 
 .blog {
   grid-area: blog; }

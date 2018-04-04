@@ -7,7 +7,7 @@ $(window).scroll(function(){
       'transform' : 'translate(0px, ' + wScroll/10 + '%)'
   })
   
-  $('.back-bird').css({
+  $('.back-img').css({
       'transform' : 'translate(0px, '+ wScroll/4 + '%)'
   })
 
@@ -18,12 +18,21 @@ $(window).scroll(function(){
   if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
 
     $('.team figure').each(function (i) {
-
         setTimeout(function () {
             $('.team figure').eq(i).addClass('is-showing')
-        }, (700 * Math.exp(i*0.14) - 700))   
+        }, (700 * Math.exp(i*0.14) - 700))
     })
   }
+
+  if(wScroll > $('.advisors').offset().top - ($(window).height() / 1.2)){
+
+    $('.advisors figure').each(function (i) {
+        setTimeout(function () {
+            $('.advisors figure').eq(i).addClass('is-showing')
+        }, (700 * Math.exp(i*0.14) - 700))
+    })
+  }
+
 
   //periscope
 
