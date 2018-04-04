@@ -904,6 +904,7 @@ img {
   height: 687px;
   background-size: auto 600px;
   background-color: #000816;
+  background-image: url(/images/headbkgL.png);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
@@ -931,16 +932,6 @@ img {
   left: 1.5%;
   margin-left: -12px;
   top: 500px; }
-
-.back-img {
-  width: 960px;
-  height: 298px;
-  background-image: url(/images/back-bird.png);
-  background-repeat: no-repeat;
-  background-position: top left;
-  position: absolute;
-  left: 50%;
-  margin-left: -480px; }
 
 .team, .advisors {
   margin-bottom: 100px; }
