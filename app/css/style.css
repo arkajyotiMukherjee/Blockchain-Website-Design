@@ -904,7 +904,7 @@ img {
   height: 687px;
   background-size: auto 600px;
   background-color: #000816;
-  background-image: url(/images/headbkgL.png);
+  background-image: url(../images/headbkgL.png);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
@@ -914,7 +914,7 @@ img {
   height: 600px;
   width: 100%;
   background-size: contain;
-  background-image: url(/images/globeImg.png);
+  background-image: url(../images/globeImg.png);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -925,7 +925,7 @@ img {
   width: 100%;
   height: 200px;
   background-size: contain;
-  background-image: url(/images/logographic.png);
+  background-image: url(../images/logographic.png);
   background-repeat: no-repeat;
   background-position: bottom;
   position: absolute;
@@ -968,7 +968,7 @@ img {
   height: 700px;
   margin-top: 100px;
   border-radius: 50%;
-  background-image: url(/images/cat-coin.jpg);
+  background-image: url(../images/cat-coin.jpg);
   background-repeat: repeat-y;
   background-position: center 0px;
   background-attachment: fixed;
@@ -1027,7 +1027,7 @@ img {
 
 footer {
   background-color: #000816;
-  background-image: url(/images/pattern_dark.png);
+  background-image: url(../images/pattern_dark.png);
   color: white;
   padding-bottom: 40px;
   position: fixed;
