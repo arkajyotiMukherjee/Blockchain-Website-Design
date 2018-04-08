@@ -869,9 +869,8 @@ img {
 .head-box {
   position: relative;
   height: 687px;
-  background-size: auto 600px;
+  background-size: cover;
   background-color: #000816;
-  background-image: url(../images/headbkgL.png);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
@@ -880,25 +879,22 @@ img {
 .globe {
   height: 600px;
   width: 100%;
-  background-size: contain;
-  background-image: url(../images/globeImg.png);
-  background-position: center;
-  background-repeat: no-repeat;
   position: absolute;
-  top: 12%;
-  margin-top: -50px; }
+  top: 45%;
+  margin-top: -50px;
+  color: white;
+  font-size: 60px;
+  font-weight: 800; }
 
-.logo {
+.back-img {
   width: 100%;
-  height: 200px;
-  background-size: contain;
-  background-image: url(../images/logographic.png);
+  height: 100%;
+  background-size: cover;
+  background-image: url(../images/LP_header_resized.min.dark.png);
   background-repeat: no-repeat;
-  background-position: bottom;
-  position: absolute;
-  left: 1.5%;
-  margin-left: -12px;
-  top: 500px; }
+  background-position: top center;
+  background-attachment: fixed;
+  position: absolute; }
 
 .team, .advisors {
   margin-bottom: 100px; }

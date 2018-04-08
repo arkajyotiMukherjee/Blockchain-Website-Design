@@ -7,9 +7,9 @@ $(window).scroll(function(){
       'transform' : 'translate(0px, ' + wScroll/10 + '%)'
   })
   
-  $('.back-img').css({
-      'transform' : 'translate(0px, '+ wScroll/4 + '%)'
-  })
+  // $('.back-img').css({
+  //     'transform' : 'translate(0px, '+ wScroll/4 + '%)'
+  // })
 
   $('.logo').css({
       'transform' : 'translate(0px, -'+ wScroll/100 + '%)'
