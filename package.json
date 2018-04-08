@@ -1,0 +1,31 @@
+{
+  "name": "lattice-protocol",
+  "version": "1.0.0",
+  "description": "lattice protocol ico website",
+  "main": "app/index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "scripts": {
+    "start": "parcel app/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latticeChainEngg/front_end.git"
+  },
+  "keywords": [
+    "blockcahin",
+    "lattice",
+    "lattice-protocol",
+    "cryptocurrency"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/latticeChainEngg/front_end/issues"
+  },
+  "homepage": "https://github.com/latticeChainEngg/front_end#readme",
+  "optionalDependencies": {}
+}

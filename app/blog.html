@@ -8,14 +8,14 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="images/logographic.png">
     <link rel="stylesheet" href="css/style.css">
-    <title>Documents</title>
+    <title>Blog</title>
 </head>
 <body>
 
     <style>
     
               
-      .documents-content{
+      .blog-content{
         background-image: url("images/pattern_light.png");
         z-index: 4;
         position: relative;
@@ -38,14 +38,52 @@
       }
 
       footer{
-        position: relative;
-      }
+				position: relative;
+			}
 
-      
+      .blog-container{
+				background-color: #f1f1f1;
+				width: 100%;
+				border-radius: 10px;
+				box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.20) , 0 0.2em 1em rgba(0, 0, 0, 0.19) !important;
+				padding-bottom: 1px;
+				margin-bottom: 50px;
+			}
+			
+			.img-container{
+				position: relative;
+				margin-bottom: 30px;
+				width: 100%;
+				height: 400px;
+				overflow: hidden;
+			}
+
+			.img-container > img{
+				width: 100%;
+				height: auto;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+
+			
+			.title{
+				background-color: #000e28;
+				padding: 10px 0 5px 0;
+				border-radius: 10px 10px 0 0;
+			}
+
+			.title > h1{
+				color: #f1f1f1;
+			}
+
     </style>
 
 
-<section class="documents-content">
+<section class="blog-content">
 
   <!-- Tab box -->
 
@@ -60,19 +98,60 @@
 
   <!-- Content -->
   <article>
-    <h1>Documents</h1>
+    <h1>Blog</h1>
     <hr>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, est dolorem nam id atque vel, repellendus, eligendi suscipit quia at quis facere excepturi! Provident vel nam minus commodi soluta cum.</p>
 
-    <h1>White Paper comming soon</h1>
+		<!-- Single Unit of the Blog Container -->
+    <div class="blog-container">
+			<div class="title">
+				<h1>Title 1</h1>
+			</div>
 
-    <h5>Subscribe to the newsletter to get notified.</h5>
+			<div class="img-container">
+				<img src="images/cat_typing.gif" alt="">
+			</div>
 
-    <form action="">
-      <input type="email" placeholder="Email" required autocomplete="email" class="contact-details email">
-      <input type="submit" value="SEND MESSAGE" class="button-primary">
-    </form>
+			<div class="desp">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+			</div>
+			<p><a href="#" class="button">READ MORE</a></p>
+    </div>
+
+
+		<div class="blog-container">
+			<div class="title">
+				<h1>Title 2</h1>
+			</div>
+
+			<div class="img-container">
+				<img src="images/dancing_cat.gif" alt="">
+			</div>
+
+			<div class="desp">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+			</div>
+			<p><a href="#" class="button">READ MORE</a></p>
+		</div>
+
+			
+		<div class="blog-container">
+			<div class="title">
+				<h1>Title 3</h1>
+			</div>
+
+			<div class="img-container">
+				<img src="images/cat_typing.gif" alt="">
+			</div>
+
+			<div class="desp">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+			</div>
+			<p><a href="#" class="button">READ MORE</a></p>
+		</div>
+
+
 
   </article>
 
