@@ -38,7 +38,7 @@ figure
 
   article
     padding: 100px 0
-    max-width: 700px
+    max-width: 800px
     margin: 0 auto
     text-align: center
 
@@ -70,11 +70,14 @@ img
   //   position: center
   //   repeat: no-repeat
   position: absolute
-  top: 45%
+  top: 35%
+  left: 5%
   margin-top: -50px
   color: white
   font-size: 60px
   font-weight: 800
+  font-family: 'Poppins', sans-serif
+  user-select: none
 
 // .logo
 //   width: 100%
@@ -94,7 +97,7 @@ img
   height: 100%
   background: 
     size: cover
-    image: url(../images/LP_header_resized.min.dark.png)
+    //image: url(../images/LP_header_resized.min.dark.png)
     repeat: no-repeat
     position: top center
     attachment: fixed
@@ -102,7 +105,8 @@ img
   // filter: blur(3px)
 
 .team, .advisors
-  margin-bottom: 100px
+  width: 85%
+  margin: 0 auto
   figure
     margin-bottom: 20px
     position: relative
@@ -135,24 +139,24 @@ img
       background: black
       color: white
       padding: 2px 8px
-      font-size: 11px
+      font-size: 14px
       transition: all 0.3s ease-in-out
 
 //periscope
 .large-window
-  height: 700px
-  margin-top: 100px
+  height: 600px
+  width: 600px
   border-radius: 50%
   background: 
-    image: url(../images/cat-coin.jpg)
+    image: url(../images/test9.png)
     repeat: repeat-y
     position: center 0px
     attachment: fixed
   position: relative
-  margin-bottom: 100px
+  margin: 0 auto
   
   .window-tint
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.7)
     position: absolute
     top: 0
     bottom: 0
@@ -164,6 +168,7 @@ img
     align-items: center
 
     .promo-text
+      opacity: 1
       color: white
       font-weight: 100
       font-size: 50px
@@ -179,7 +184,7 @@ img
             weight: 300
             size: 18px
             style: italic
-          color: rgba(255,255,255,0.6)
+          color: rgb(255,255,255)
 
       .window-cta
         font-size: 20px
@@ -298,6 +303,7 @@ input
   display: grid
   grid-template-columns: repeat(5, 1fr)
   grid-template-areas: 'home product documents blog contact'
+  
 
 
 .tabs
@@ -313,6 +319,7 @@ a
   text-decoration: none
 
 .tabs:hover
+  transition: all 0.4s ease-in-out
   background-color: #f1f1f1
   color: #000816
 
@@ -348,3 +355,23 @@ a
 
 .ecosystem, .roadmap
   position: relative
+
+.f-container
+  font-size: 14px
+  position: relative
+  width: 1000px
+  margin: 0 auto
+  left: -100px
+  overflow: none
+
+  
+.f-row
+  position: relative
+  z-index: 4
+
+.f-item
+
+.f-image
+
+.f-text > strong
+  font-size: 18px

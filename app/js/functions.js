@@ -24,14 +24,14 @@ $(window).scroll(function(){
     })
   }
 
-  if(wScroll > $('.advisors').offset().top - ($(window).height() / 1.2)){
+  // if(wScroll > $('.advisors').offset().top - ($(window).height() / 1.2)){
 
-    $('.advisors figure').each(function (i) {
-        setTimeout(function () {
-            $('.advisors figure').eq(i).addClass('is-showing')
-        }, (700 * Math.exp(i*0.14) - 700))
-    })
-  }
+  //   $('.advisors figure').each(function (i) {
+  //       setTimeout(function () {
+  //           $('.advisors figure').eq(i).addClass('is-showing')
+  //       }, (700 * Math.exp(i*0.14) - 700))
+  //   })
+  // }
 
 
   //periscope

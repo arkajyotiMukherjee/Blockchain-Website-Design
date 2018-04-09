@@ -859,7 +859,7 @@ figure {
   z-index: 3; }
   .content article {
     padding: 100px 0;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center; }
 
@@ -880,24 +880,27 @@ img {
   height: 600px;
   width: 100%;
   position: absolute;
-  top: 45%;
+  top: 35%;
+  left: 5%;
   margin-top: -50px;
   color: white;
   font-size: 60px;
-  font-weight: 800; }
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  user-select: none; }
 
 .back-img {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url(../images/LP_header_resized.min.dark.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
   position: absolute; }
 
 .team, .advisors {
-  margin-bottom: 100px; }
+  width: 85%;
+  margin: 0 auto; }
   .team figure, .advisors figure {
     margin-bottom: 20px;
     position: relative;
@@ -924,21 +927,21 @@ img {
       background: black;
       color: white;
       padding: 2px 8px;
-      font-size: 11px;
+      font-size: 14px;
       transition: all 0.3s ease-in-out; }
 
 .large-window {
-  height: 700px;
-  margin-top: 100px;
+  height: 600px;
+  width: 600px;
   border-radius: 50%;
-  background-image: url(../images/cat-coin.jpg);
+  background-image: url(../images/test9.png);
   background-repeat: repeat-y;
   background-position: center 0px;
   background-attachment: fixed;
   position: relative;
-  margin-bottom: 100px; }
+  margin: 0 auto; }
   .large-window .window-tint {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -949,6 +952,7 @@ img {
     justify-content: center;
     align-items: center; }
     .large-window .window-tint .promo-text {
+      opacity: 1;
       color: white;
       font-weight: 100;
       font-size: 50px;
@@ -961,7 +965,7 @@ img {
           font-weight: 300;
           font-size: 18px;
           font-style: italic;
-          color: rgba(255, 255, 255, 0.6); }
+          color: white; }
       .large-window .window-tint .promo-text .window-cta {
         font-size: 20px;
         text-decoration: none;
@@ -1064,6 +1068,7 @@ a {
   text-decoration: none; }
 
 .tabs:hover {
+  transition: all 0.4s ease-in-out;
   background-color: #f1f1f1;
   color: #000816; }
 
@@ -1094,3 +1099,18 @@ a {
 
 .ecosystem, .roadmap {
   position: relative; }
+
+.f-container {
+  font-size: 14px;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  left: -100px;
+  overflow: none; }
+
+.f-row {
+  position: relative;
+  z-index: 4; }
+
+.f-text > strong {
+  font-size: 18px; }
