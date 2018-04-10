@@ -44,11 +44,15 @@
       .blog-container{
 				background-color: #f1f1f1;
 				width: 100%;
-				border-radius: 10px;
 				box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.20) , 0 0.2em 1em rgba(0, 0, 0, 0.19) !important;
 				padding-bottom: 1px;
 				margin-bottom: 50px;
 			}
+
+      .blog-container:hover{
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+      }
 			
 			.img-container{
 				position: relative;
@@ -71,14 +75,20 @@
 
 			
 			.title{
-				background-color: #000e28;
-				padding: 10px 0 5px 0;
-				border-radius: 10px 10px 0 0;
+				padding: 0 10px 0 10px;
 			}
 
-			.title > h1{
-				color: #f1f1f1;
+			.title > h4{
+        font-weight: 700;
+        text-align: left;
+        padding-left: 15px;
 			}
+
+      .desp{
+        padding: 5px 25px;
+        text-align: justify;
+      }
+
 
     </style>
 
@@ -101,54 +111,59 @@
     <h1>Blog</h1>
     <hr>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, est dolorem nam id atque vel, repellendus, eligendi suscipit quia at quis facere excepturi! Provident vel nam minus commodi soluta cum.</p>
+    <p> <strong>A Block-Chain powered SaaS Suite building collaborative ecosystem, bringing upstream and downstream synergies for Market participants globally</strong></p>
 
 		<!-- Single Unit of the Blog Container -->
     <div class="blog-container">
-			<div class="title">
-				<h1>Title 1</h1>
-			</div>
-
+		
 			<div class="img-container">
-				<img src="images/cat_typing.gif" alt="">
+				<img src="images/lattice-intro.png" alt="">
 			</div>
 
+      <div class="title">
+        <h4>Lattice Protocol — The beginning of a new era!!</h4>
+      </div>
+      
 			<div class="desp">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+				<p>Sharing marketplace has seen a tremendous growth in the last decade with centralized organizations like Amazon, Freelancer enabling strangers to transact seamlessly, removing transaction friction. The success of these organizations has been…
+        </p>
 			</div>
-			<p><a href="#" class="button">READ MORE</a></p>
+			<p><a href="https://medium.com/@LatticeProtocol/sharing-marketplace-has-seen-a-tremendous-growth-in-the-last-decade-with-centralized-organizations-6f9ad787b65d" target="_blank" class="button">READ MORE</a></p>
     </div>
 
 
 		<div class="blog-container">
-			<div class="title">
-				<h1>Title 2</h1>
-			</div>
 
 			<div class="img-container">
-				<img src="images/dancing_cat.gif" alt="">
+				<img src="images/lattice-research.png" alt="">
 			</div>
 
+      <div class="title">
+        <h4>Lattice Protocol — The Research</h4>
+      </div>
+
 			<div class="desp">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+				<p>Lattice recently concluded a research on e-Sellers and small Businesses to spot the challenges they face in current ecosystem. The survey was conducted across 3 countries and 12 cities which included 1st, 2nd and 3rd tier participants. <br><br>
+            The survey participants were initially asked open ended questions, but then to bring in objectivity to the discussion, a 15 parameter challenge list was presented from amongst the common list which evolved out of the initial discussion.</p>
 			</div>
-			<p><a href="#" class="button">READ MORE</a></p>
+			<p><a href="https://medium.com/@LatticeProtocol/94-of-the-participants-responded-to-brand-identity-as-a-critical-factor-to-e-success-but-felt-the-87dc00fd73ea" target="_blank" class="button">READ MORE</a></p>
 		</div>
 
 			
 		<div class="blog-container">
-			<div class="title">
-				<h1>Title 3</h1>
-			</div>
 
 			<div class="img-container">
 				<img src="images/cat_typing.gif" alt="">
 			</div>
 
+      <div class="title">
+        <h4>A view on the issues faced by current marketplace models:</h4>
+      </div>
+
 			<div class="desp">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident quam saepe dolorum ex labore hic eius autem enim quas id, expedita eos alias, amet officia molestiae facere! Placeat, sed.</p>
+				<p>When the world speaks about Collaboration, Brands, and Targeted Positioning, the current marketplaces stands completely antagonistic to most of these views. Couple it with the cases of information privacy breach, it really poses a big question on the existing models and subconsciously raises a desire for a supermodel that can save the next gen marketplace goers.</p>
 			</div>
-			<p><a href="#" class="button">READ MORE</a></p>
+			<p><a href="https://medium.com/@LatticeProtocol/lattices-view-on-the-issues-faced-by-current-marketplace-models-41cb24e1d92f" target="_blank" class="button">READ MORE</a></p>
 		</div>
 
 
