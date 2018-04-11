@@ -899,7 +899,7 @@ img {
   position: absolute; }
 
 .team, .advisors {
-  width: 85%;
+  width: 100%;
   margin: 0 auto; }
   .team figure, .advisors figure {
     margin-bottom: 20px;
@@ -921,12 +921,11 @@ img {
     .team figure:hover img, .advisors figure:hover img {
       transform: scale(1.1); }
     .team figure figcaption, .advisors figure figcaption {
-      position: absolute;
-      bottom: 10px;
-      left: -100%;
+      position: relative;
+      bottom: 0px;
       background: black;
       color: white;
-      padding: 2px 8px;
+      padding: 0px 8px;
       font-size: 14px;
       transition: all 0.3s ease-in-out; }
 
@@ -934,7 +933,7 @@ img {
   height: 600px;
   width: 600px;
   border-radius: 50%;
-  background-image: url(../images/test9.png);
+  background-image: url("../images/LPx-Artboard 1-1000px.png");
   background-repeat: repeat-y;
   background-position: center 0px;
   background-attachment: fixed;
@@ -1114,3 +1113,6 @@ a {
 
 .f-text > strong {
   font-size: 18px; }
+
+.team-desp {
+  padding: 20px; }
