@@ -1,3 +1,5 @@
+let showOnce = 1;
+
 $(window).scroll(function(){
   var wScroll = $(this).scrollTop()
   
@@ -55,6 +57,13 @@ $(window).scroll(function(){
     $('.post-1').css({'transform': 'translate('+offset+'px,' +Math.abs(offset * 0.3)+'px)'})
 
     $('.post-3').css({'transform': 'translate('+ Math.abs(offset)+'px,' +Math.abs(offset * 0.3)+'px)'})
+  }
+
+  //scroll to the bottom
+  
+  if (($(window).scrollTop() == ($(document).height() - $(window).height())) && showOnce === 1) {
+    console.log("bottom");
+    showOnce = 2;
   }
 
 })
