@@ -1,1 +1,210 @@
-$(window).scroll(function(){var e=$(this).scrollTop();if($(".globe").css({transform:"translate(0px, "+e/10+"%)"}),$(".logo").css({transform:"translate(0px, -"+e/100+"%)"}),e>$(".team").offset().top-$(window).height()/1.2&&$(".team figure").each(function(e){setTimeout(function(){$(".team figure").eq(e).addClass("is-showing")},700*Math.exp(.14*e)-700)}),e>$(".large-window").offset().top-$(window).height()){var t=(e-$(".large-window").offset().top+400)/(e/5);$(".large-window").css({"background-position":"center "+(e-$(".large-window").offset().top)+"px"}),$(".window-tint").css({opacity:t})}if(e>$(".blog-posts").offset().top-$(window).height()){var a=Math.min(0,e-$(".blog-posts").offset().top+$(window).height()-400);$(".post-1").css({transform:"translate("+a+"px,"+Math.abs(.3*a)+"px)"}),$(".post-3").css({transform:"translate("+Math.abs(a)+"px,"+Math.abs(.3*a)+"px)"})}}),particlesJS("particles-js",{particles:{number:{value:80,density:{enable:!0,value_area:800}},color:{value:"#000"},shape:{type:"circle",stroke:{width:0,color:"#000"},polygon:{nb_sides:5},image:{src:"img/github.svg",width:100,height:100}},opacity:{value:.5,random:!1,anim:{enable:!1,speed:1,opacity_min:.1,sync:!1}},size:{value:3,random:!0,anim:{enable:!1,speed:40,size_min:.1,sync:!1}},line_linked:{enable:!0,distance:150,color:"#000",opacity:.4,width:1},move:{enable:!0,speed:1,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:600,rotateY:1200}}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:140,line_linked:{opacity:1}},bubble:{distance:400,size:40,duration:2,opacity:8,speed:3},repulse:{distance:200,duration:1},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0});
+let showOnce = 1;
+
+//Subcription message
+let modal = $('.modal');
+
+
+let closebtn = $('.close');
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop()
+  
+  //top parallax
+  
+  $('.globe').css({
+      'transform' : 'translate(0px, ' + wScroll/10 + '%)'
+  })
+  
+  // $('.back-img').css({
+  //     'transform' : 'translate(0px, '+ wScroll/4 + '%)'
+  // })
+
+  $('.logo').css({
+      'transform' : 'translate(0px, -'+ wScroll/100 + '%)'
+  })
+
+  if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
+
+    $('.team figure').each(function (i) {
+        setTimeout(function () {
+            $('.team figure').eq(i).addClass('is-showing')
+        }, (700 * Math.exp(i*0.14) - 700))
+    })
+  }
+
+  // if(wScroll > $('.advisors').offset().top - ($(window).height() / 1.2)){
+
+  //   $('.advisors figure').each(function (i) {
+  //       setTimeout(function () {
+  //           $('.advisors figure').eq(i).addClass('is-showing')
+  //       }, (700 * Math.exp(i*0.14) - 700))
+  //   })
+  // }
+
+
+  //periscope
+
+  if(wScroll > $('.large-window').offset().top - $(window).height()){
+
+    var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll/5);
+  
+    $('.large-window').css({'background-position' : 'center '+ (wScroll - $('.large-window').offset().top) +'px'})
+
+    $('.window-tint').css({'opacity': opacity})
+  }
+
+
+  //Blog posts
+
+  if(wScroll > $('.blog-posts').offset().top - $(window).height()){
+
+    var offset = Math.min(0, wScroll - $('.blog-posts').offset().top + $(window).height() - 400)
+    
+    $('.post-1').css({'transform': 'translate('+offset+'px,' +Math.abs(offset * 0.3)+'px)'})
+
+    $('.post-3').css({'transform': 'translate('+ Math.abs(offset)+'px,' +Math.abs(offset * 0.3)+'px)'})
+  }
+
+
+  //scroll to the bottom
+  
+  if ((Math.ceil(wScroll) == ($(document).height() - $(window).height())) && showOnce === 1) {
+    console.log("bottom");
+    showOnce = 0;
+
+    modal.css("display","block");
+
+    console.log($(window).scrollTop());
+    console.log($(document).height() - $(window).height());
+    
+    
+  }
+
+})
+
+// When the user clicks on <span> (x), close the modal
+
+closebtn.click(function() {
+  modal.css("display","none");
+})
+
+// When the user clicks anywhere outside of the modal, close it
+$(window).click(function(event) {
+  if ($(event.target).hasClass('modal')) {
+    modal.css("display","none");
+  }
+})
+
+
+/* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#000"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#000",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 1
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });

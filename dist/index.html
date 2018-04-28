@@ -20,6 +20,18 @@
 
   </head>
   <body>
+    
+    <!-- Adding Service Worker -->
+
+    <script>
+      // Check that service workers are registered
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
 
     <style>
       .tabs:hover{
@@ -51,6 +63,41 @@
       <div class="globe">LATTICE <br> PROTOCOL</div>
       <div class="logo"></div>
     </header>
+
+    <div class="float-btn">
+      <a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">
+        <svg width="50px" height="50px" class="telegram-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" /></svg>
+      </a>
+    </div>
+
+    <!-- Subcribe to new letter message -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          STAY CONNECTED
+        </div>
+        <div class="modal-body">
+          <p>Write Somthing about Lattice protocol to Atrract the viewers</p>
+          <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+          <form action="">
+            <div class="columns eight">
+              <input type="email" placeholder="Your Email" class="u-full-width">
+            </div>
+            <div class="columns four">
+              <input type="submit" value="SUMBIT" class="button-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
 
     
     <section class="content">
@@ -142,7 +189,7 @@
               </div>
               <div class="columns nine f-text">
                 <strong>Inbuilt Governance</strong>
-                <p>Lattice Protocol through its inbuilt Governance model will promote information credibility and sanctity of the network. At all levels  a dynamic validation engine driven by network participants, would keep  a watch on the network and its activities.</p>
+                <p>Lattice Protocol through its inbuilt Governance model will promote information credibility and sanctity of the network. At all levels  a dynamic validation engine driven by network participants would keep a watch on the network and its activities and AI/ML models would be leveraged for fraud prevention.</p>
               </div>
             </div>
 
@@ -173,7 +220,7 @@
         <h1>Ecosystem</h1>
         <hr>
         <div class="ecosystem">
-            <video src="images/ecosystem.mp4" autoplay loop muted id="eco_vd" width="100%"></video>
+          <video src="images/ecosystem.mp4" autoplay loop muted id="eco_vd" width="100%"></video>
         </div>
         <hr>
         <div class="large-window">
@@ -205,33 +252,56 @@
         <hr>
         <h1>Roadmap</h1>
         <hr>
-        <div class="ecosystem"><img src="images/dancing_cat.gif" alt="Roadmap Image"></div>
+        <div class="ecosystem">
+          <video src="images/TheRoadMap360.mp4" autoplay loop muted id="road_vd" width="100%"></video>
+        </div>
         <hr>
         <h1>Team Members</h1>
         <hr>
         <div class="team">
 
           <div class="row img-row">
-            <figure class="columns four"><img src="images/cat-mem1.jpg">
+            <figure class="columns four">
+              <div class="t-img">
+              <img src="images/cat-mem1.jpg">
               <figcaption>BlockChain Developer - <br> <strong>Mr.Somebody</strong></figcaption>
+              </div>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
             <figure class="columns four"><img src="images/cat-mem2.jpg">
               <figcaption>Backend developer - <br> <strong>Mr.Black Hat</strong></figcaption>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
             <figure class="columns four"><img src="images/cat-mem3.jpg">
               <figcaption>FrontEnd Developer - <br> <strong>Mr.Designer</strong></figcaption>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
           </div>
           
           <div class="row img-row">
             <figure class="columns four"><img src="images/cat-mem4.jpg">
               <figcaption>Marketing - <br> <strong>Mr.Market</strong></figcaption>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
             <figure class="columns four"><img src="images/cat-mem5.jpg">
               <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
             <figure class="columns four"><img src="images/cat-mem6.jpg">
               <figcaption>Other Team - <br> <strong>Mr.Person</strong></figcaption>
+              <div class="team-desp">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo esse nemo illum et, reiciendis odio unde fugit aspernatur? Debitis, eos maiores optio eveniet ex ab aperiam inventore quis molestias?
+              </div>
             </figure>
           </div>
 
@@ -324,15 +394,15 @@
       <div class="row footer-stuff">
         <div class="columns three cap"><strong>FIND US ON</strong>
           <ul>
-            <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw">Telegram</a></li>
-            <li><a href="https://medium.com/@LatticeProtocol">Medium</a></li>
-            <li><a href="https://www.linkedin.com/company/13692883/">LinkedIn</a></li>
+            <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
+            <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
+            <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
         <div class="columns three cap"><strong>MORE LINKS</strong>
           <ul>
-            <li><a href="https://www.facebook.com/LatticeProtocol/">Facebook</a></li>
-            <li><a href="https://twitter.com/LatticeProtocol">Twitter</a></li>
+            <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
           </ul>
         </div>
         <div class="columns six cap">

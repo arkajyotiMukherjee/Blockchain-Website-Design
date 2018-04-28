@@ -39,13 +39,13 @@ gulp.task('watch', ['sass', 'browser-sync'], function(){
 
 gulp.task('assets-build', function(){
 	return gulp.src('app/**/*.+(js|css|html)')
-	.pipe(gulpIf('*.js', uglify()))
+	// .pipe(gulpIf('*.js', uglify()))
 	.pipe(gulpIf('*.css', cssnano()))
 	.pipe(gulp.dest('dist'))
 })
 
 gulp.task('images', function(){
-	return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+	return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4)')
 	.pipe(cache(imagemin({
 		interlaced: true
 	})))
