@@ -1,5 +1,11 @@
 let showOnce = 1;
 
+//Subcription message
+let modal = $('.modal');
+
+
+let closebtn = $('.close');
+
 $(window).scroll(function(){
   var wScroll = $(this).scrollTop()
   
@@ -59,13 +65,34 @@ $(window).scroll(function(){
     $('.post-3').css({'transform': 'translate('+ Math.abs(offset)+'px,' +Math.abs(offset * 0.3)+'px)'})
   }
 
+
   //scroll to the bottom
   
-  if (($(window).scrollTop() == ($(document).height() - $(window).height())) && showOnce === 1) {
+  if ((Math.ceil(wScroll) == ($(document).height() - $(window).height())) && showOnce === 1) {
     console.log("bottom");
-    showOnce = 2;
+    showOnce = 0;
+
+    modal.css("display","block");
+
+    console.log($(window).scrollTop());
+    console.log($(document).height() - $(window).height());
+    
+    
   }
 
+})
+
+// When the user clicks on <span> (x), close the modal
+
+closebtn.click(function() {
+  modal.css("display","none");
+})
+
+// When the user clicks anywhere outside of the modal, close it
+$(window).click(function(event) {
+  if ($(event.target).hasClass('modal')) {
+    modal.css("display","none");
+  }
 })
 
 

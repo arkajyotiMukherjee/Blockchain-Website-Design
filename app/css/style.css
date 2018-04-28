@@ -886,7 +886,7 @@ img {
   color: white;
   font-size: 60px;
   font-weight: 800;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   user-select: none; }
 
 .back-img {
@@ -1028,7 +1028,7 @@ canvas {
   width: 100%;
   height: 100%;
   opacity: 0.9;
-  background-color: #fff;
+  background-color: white;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1138,11 +1138,76 @@ a {
 .telegram-logo:hover {
   fill: #115bd8; }
 
-.sub-box {
+/* The Modal (background) */
+.modal {
   display: none;
-  z-index: 7;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  font-size: 70px;
-  background-color: #fff; }
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 0;
+  width: 750px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s; }
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+.modal-header {
+  padding: 16px 16px;
+  background-color: #021f4f;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px; }
+
+.modal-body {
+  padding: 16px 16px;
+  text-align: center; }
+
+.modal-footer {
+  padding: 16px 16px 32px 100px;
+  background-color: #021f4f;
+  color: white; }
