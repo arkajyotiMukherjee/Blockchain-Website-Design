@@ -67,7 +67,7 @@ img
   background: 
     size: cover
     color: $accent-color
-    //image: url(../images/LP_Stardust_bkg2.png)
+    // image: url(../images/LP_header_resized.min.dark.png)
     position: top center
     attachment: fixed
   overflow: hidden
@@ -95,6 +95,10 @@ img
   font-family: $bold-font
   user-select: none
 
+.head-desp
+  color: $primary-color
+  font-size: 30px
+
 // .logo
 //   width: 100%
 //   height: 200px
@@ -119,6 +123,10 @@ img
     attachment: fixed
   position: absolute
   // filter: blur(3px)
+
+.lattice-intro
+  text-transform: uppercase
+  font-weight: 600
 
 .team, .advisors
   width: 100%
@@ -227,6 +235,13 @@ img
     padding: 20px 20px 0
     background: $primary-color
     position: relative
+
+  .img-box
+    width: 100%
+    height: 200px
+    overflow: hidden
+
+    img
 
   .post-1
     transform: translate(100px, 20px)
@@ -414,17 +429,17 @@ a
   width: 100% //Full width
   height: 100% //Full height
   overflow: auto //Enable scroll if needed
-  background-color: $secondary-color //Fallback color
+  background-color: $tab-color //Fallback color
   background-color: rgba(0,0,0,0.6) //Black w/ opacity
 
 
 /* Modal Content */
 .modal-content 
   position: relative
-  background-color: $primary-color
+  background-color: $tab-color
   margin: auto
   padding: 0
-  width: 750px
+  width: 600px
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
   -webkit-animation-name: animatetop
   -webkit-animation-duration: 0.4s
@@ -455,46 +470,47 @@ a
 
 /* The Close Button */
 .close 
-  color: $primary-color
+  color: $accent-color
   float: right
   font-size: 28px
   font-weight: bold
 
 
 .close:hover, .close:focus 
-  color: $secondary-color
+  color: $telegram-selected-color
   text-decoration: none
   cursor: pointer
 
 
 .modal-header 
-  padding: 16px 16px
-  background-color: $accent-color
-  color: $primary-color
-  text-align: center
-  font-family: $bold-font
-  font-weight: 700
-  font-size: 40px
+  padding: 16px 16px 0 16px
+  background-color: $tab-color
+
+  p
+    display: flex
+    color: $accent-color
+    text-align: center
+    font-family: $bold-font
+    font-weight: 700
+    font-size: 40px
+    justify-content: center
 
 
 .modal-body 
-  padding: 16px 16px
+  padding: 16px 16px 0 16px
   text-align: center
+  font-size: 18px
 
 .modal-footer 
-  padding: 20px
+  padding: 0 20px
   padding-bottom: 5px
-  background-color: $accent-color
-  color: $primary-color
+  background-color: $tab-color
+  color: $accent-color
 
 .modal_sub_btn > input
   display: block
   margin: 0 auto 
   padding-bottom: 5px
-
-  
-
-
 
 
 .f-container
@@ -527,6 +543,21 @@ a
     .post-1, .post-3
       transform: none
 
+@media(max-width: 550px)
+  .f-item
+    padding: 16px
+    display: block
+
+  .f-image > img
+    display: block
+    max-width: 100px
+    margin: 0 auto
+    padding: 16px
+
+  .f-container
+    padding: 16px
+
+
 
 
 .menu
@@ -539,6 +570,17 @@ a
 
   .menu
     display: block
+    text-align: right
+    padding-right: 16px
+
+  .head-name
+    display: inline
+    position: absolute
+    text-align: left
+    text-transform: uppercase
+    font-size: 20px
+    left: 30px
+    top: 7px
 
   .tabs
     display: none
@@ -582,18 +624,10 @@ a
       padding: 0 16px
  
 
-  .f-item
-    padding: 16px
-    display: block
-
-  .f-image > img
-    display: block
-    max-width: 100px
-    margin: 0 auto
-    padding: 16px
-
-  .f-container
-    padding: 16px
-
+  
   .content
     margin-bottom: 0px
+
+  .head-box
+    background-image: url(../images/LP_header_resized.min.dark.png)
+
