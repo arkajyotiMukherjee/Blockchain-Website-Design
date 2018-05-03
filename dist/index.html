@@ -45,9 +45,15 @@
       .tab-box{
         background-color: #f1f1f1;
       }
+
+      .menu{
+        color: #000816;
+      }
+      
     </style>
 
     <div class="tab-box">
+      <a href="javascript:void(0);" class="menu selected" onclick="showMenu()">&#9776;</a>
       <a href="index.html" class="tabs"><span class="home">Home</span></a>
       <a href="product.html" class="tabs"><span class="product">Product</span></a>
       <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
@@ -58,7 +64,7 @@
 
     <header class="head-box">
       <div class="back-img">
-        <video src="images/LP_Header_Anime.mp4" autoplay loop muted id="head_vd" width="100%" poster="images/LP_Stardust_bkg2.png"></video>
+        <video src="images/LP_Header_Anime.mp4" autoplay loop muted id="head_vd" poster="images/LP_Stardust_bkg2.png"></video>
       </div>
       <div class="globe">LATTICE <br> PROTOCOL</div>
       <div class="logo"></div>
@@ -86,11 +92,11 @@
         </div>
         <div class="modal-footer">
           <form action="">
-            <div class="columns eight">
+            <div class="modal_submit_field">
               <input type="email" placeholder="Your Email" class="u-full-width">
             </div>
-            <div class="columns four">
-              <input type="submit" value="SUMBIT" class="button-primary">
+            <div class="modal_sub_btn">
+              <input type="submit" value="SUBMIT" class="button-primary">
             </div>
           </form>
         </div>
@@ -105,7 +111,7 @@
         <h1>What is Lattice Protocol?</h1>
         <hr>
         <div id="particles-js">
-          <div class="particle-container"><img src="images/blurry-thing.png" alt=""></div>
+          <div class="particle-container"></div>
         </div>
         <p class="lattice-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
         <hr>
@@ -217,18 +223,23 @@
         </div>
 
         <hr>
-        <h1>Ecosystem</h1>
+
+        <!-- <h1>Ecosystem</h1>
         <hr>
         <div class="ecosystem">
           <video src="images/ecosystem.mp4" autoplay loop muted id="eco_vd" width="100%"></video>
         </div>
-        <hr>
-        <div class="large-window">
+        <hr> -->
+
+
+        <!-- <div class="large-window">
           <div class="window-tint">
             <div class="promo-text">Token Sale<strong><span>from </span>1/2/2018</strong>
               <a href="" class="window-cta">Buy Tokens</a></div>
           </div>
-        </div>
+        </div> -->
+
+        
         <hr>
         <h1>Blog Posts</h1>
         <hr>
@@ -250,12 +261,16 @@
           </div>
         </div>
         <hr>
+
+
         <h1>Roadmap</h1>
         <hr>
         <div class="ecosystem">
           <video src="images/TheRoadMap360.mp4" autoplay loop muted id="road_vd" width="100%"></video>
         </div>
         <hr>
+
+
         <h1>Team Members</h1>
         <hr>
         <div class="team">
@@ -412,12 +427,15 @@
               <input type="email" placeholder="Your Email" class="u-full-width">
             </div>
             <div class="columns four">
-              <input type="submit" value="SUMBIT" class="button-primary">
+              <input type="submit" value="SUBMIT" class="button-primary">
             </div>
           </form>
         </div>
       </div>
     </footer>
-    <script src="js/functions.js"></script>
+  <script src="js/functions.js"></script>
+    
+  <script src="js/menuToggle.js"></script>
+
   </body>
 </html>

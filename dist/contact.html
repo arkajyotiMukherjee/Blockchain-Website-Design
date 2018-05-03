@@ -12,123 +12,125 @@
 </head>
 <body>
 
-    <style>
+  <style>
+  
+            
+    .contact-content{
+      background-image: url("images/pattern_light.png");
+      z-index: 4;
+      position: relative;
+      width: 100%;
+    }
+
+    article{
+      padding: 100px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    body{
+      background-color: #fff;
+      background-size: 100%;
+      text-align: center;
+      margin: 0px;
+      overflow-x: hidden;
+    }
+
+    footer{
+      position: relative;
+    }
+
+    .contact-details{
+      width: 100%;
+      background-color: #000e28 !important;
+      color: white !important;
+      font-weight: bolder;
+      margin: 16px 0;
+    }
+
+    .message{
+      height: 200px !important;
+      overflow-y: hidden;
+      resize: none;
+    }
+
+    .contact-details::placeholder{
+      color: white;
+      opacity: 0.8;
+      font-weight: bold;
+    }
     
-              
-      .contact-content{
-        background-image: url("images/pattern_light.png");
-        z-index: 4;
-        position: relative;
-        width: 100%;
-      }
+  </style>
 
-      article{
-        padding: 100px 0;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      }
 
-      body{
-        background-color: #fff;
-        background-size: 100%;
-        text-align: center;
-        margin: 0px;
-        overflow-x: hidden;
-      }
+  <section class="contact-content">
 
-      footer{
-        position: relative;
-      }
+    <!-- Tab box -->
 
-      .contact-details{
-        width: 100%;
-        background-color: #000e28 !important;
-        color: white !important;
-        font-weight: bolder;
-        margin: 16px 0;
-      }
+    <div id="myTab" class="tab-box">
+      <a href="javascript:void(0);" class="menu selected" onclick="showMenu()">&#9776;</a>
+      <a href="index.html" class="tabs"><span class="home">Home</span></a>
+      <a href="product.html" class="tabs"><span class="product">Product</span></a>
+      <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
+      <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
+      <a href="blog.html" class="tabs"><span class="blog">Blog</span></a>
+      <a href="contact.html" class="tabs"><span class="contact">Contact</span></a>
+    </div>
 
-      .message{
-        height: 200px !important;
-        overflow-y: hidden;
-        resize: none;
-      }
+    <!-- Content -->
+    <article>
+      <h1>Contact</h1>
+      <hr>
 
-      .contact-details::placeholder{
-        color: white;
-        opacity: 0.8;
-        font-weight: bold;
-      }
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, est dolorem nam id atque vel, repellendus, eligendi suscipit quia at quis facere excepturi! Provident vel nam minus commodi soluta cum.</p>
+
+      <form action="" autocomplete="on">
+        <input type="text" placeholder="Name" required autocomplete="name" class="contact-details name">
+        <input type="email" placeholder="Email" required autocomplete="email" class="contact-details email">
+        <textarea placeholder="Message" required class="contact-details message"></textarea>
+        
+        <input type="submit" value="SEND MESSAGE" class="button-primary">
+      </form>
+
+    </article>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="row footer-stuff">
+          <div class="columns three cap"><strong>FIND US ON</strong>
+            <ul>
+              <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
+              <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
+              <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="columns three cap"><strong>MORE LINKS</strong>
+            <ul>
+              <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
+            </ul>
+          </div>
+          <div class="columns six cap">
+            <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
+            <form action="" class="row">
+              <div class="columns eight">
+                <input type="email" placeholder="Your Email" class="u-full-width">
+              </div>
+              <div class="columns four">
+                <input type="submit" value="SUBMIT" class="button-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+  </section>
       
-    </style>
-
-
-<section class="contact-content">
-
-  <!-- Tab box -->
-
-  <div id="myTab" class="tab-box">
-    <a href="index.html" class="tabs"><span class="home">Home</span></a>
-    <a href="product.html" class="tabs"><span class="product">Product</span></a>
-    <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
-    <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
-    <a href="blog.html" class="tabs"><span class="blog">Blog</span></a>
-    <a href="contact.html" class="tabs"><span class="contact">Contact</span></a>
-  </div>
-
-  <!-- Content -->
-  <article>
-    <h1>Contact</h1>
-    <hr>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, est dolorem nam id atque vel, repellendus, eligendi suscipit quia at quis facere excepturi! Provident vel nam minus commodi soluta cum.</p>
-
-    <form action="" autocomplete="on">
-      <input type="text" placeholder="Name" required autocomplete="name" class="contact-details name">
-      <input type="email" placeholder="Email" required autocomplete="email" class="contact-details email">
-      <textarea placeholder="Message" required class="contact-details message"></textarea>
-      
-      <input type="submit" value="SEND MESSAGE" class="button-primary">
-    </form>
-
-  </article>
-
-
-
-  <!-- Footer -->
-
-  <footer>
-      <div class="row footer-stuff">
-        <div class="columns three cap"><strong>FIND US ON</strong>
-          <ul>
-            <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
-            <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
-            <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-        <div class="columns three cap"><strong>MORE LINKS</strong>
-          <ul>
-            <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
-          </ul>
-        </div>
-        <div class="columns six cap">
-          <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
-          <form action="" class="row">
-            <div class="columns eight">
-              <input type="email" placeholder="Your Email" class="u-full-width">
-            </div>
-            <div class="columns four">
-              <input type="submit" value="SUMBIT" class="button-primary">
-            </div>
-          </form>
-        </div>
-      </div>
-    </footer>
-
-</section>
-    
+  <script src="js/menuToggle.js"></script> 
 
 </body>
 </html>

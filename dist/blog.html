@@ -12,199 +12,201 @@
 </head>
 <body>
 
-    <style>
+  <style>
+  
+            
+    .blog-content{
+      background-image: url("images/pattern_light.png");
+      z-index: 4;
+      position: relative;
+      width: 100%;
+    }
+
+    article{
+      padding: 100px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    body{
+      background-color: #fff;
+      background-size: 100%;
+      text-align: center;
+      margin: 0px;
+      overflow-x: hidden;
+    }
+
+    footer{
+      position: relative;
+    }
+
+    .blog-container{
+      background-color: #f1f1f1;
+      width: 100%;
+      box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.20) , 0 0.2em 1em rgba(0, 0, 0, 0.19) !important;
+      padding-bottom: 1px;
+      margin-bottom: 50px;
+    }
+
+    .blog-container:hover{
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+    }
     
-              
-      .blog-content{
-        background-image: url("images/pattern_light.png");
-        z-index: 4;
-        position: relative;
-        width: 100%;
-      }
+    .img-container{
+      position: relative;
+      margin-bottom: 30px;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
 
-      article{
-        padding: 100px 0;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      }
+    .img-container > img{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
 
-      body{
-        background-color: #fff;
-        background-size: 100%;
-        text-align: center;
-        margin: 0px;
-        overflow-x: hidden;
-      }
+    
+    .title{
+      padding: 0 10px 0 10px;
+    }
 
-      footer{
-				position: relative;
-			}
+    .title > h4{
+      font-weight: 700;
+      text-align: left;
+      padding-left: 15px;
+    }
 
-      .blog-container{
-				background-color: #f1f1f1;
-				width: 100%;
-				box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.20) , 0 0.2em 1em rgba(0, 0, 0, 0.19) !important;
-				padding-bottom: 1px;
-				margin-bottom: 50px;
-			}
-
-      .blog-container:hover{
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
-      }
-			
-			.img-container{
-				position: relative;
-				margin-bottom: 30px;
-				width: 100%;
-				height: 400px;
-				overflow: hidden;
-			}
-
-			.img-container > img{
-				width: 100%;
-				height: auto;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				margin: auto;
-			}
-
-			
-			.title{
-				padding: 0 10px 0 10px;
-			}
-
-			.title > h4{
-        font-weight: 700;
-        text-align: left;
-        padding-left: 15px;
-			}
-
-      .desp{
-        padding: 5px 25px;
-        text-align: justify;
-      }
+    .desp{
+      padding: 5px 25px;
+      text-align: justify;
+    }
 
 
-    </style>
+  </style>
 
 
-<section class="blog-content">
+  <section class="blog-content">
 
-  <!-- Tab box -->
+    <!-- Tab box -->
 
-  <div id="myTab" class="tab-box">
-    <a href="index.html" class="tabs"><span class="home">Home</span></a>
-    <a href="product.html" class="tabs"><span class="product">Product</span></a>
-    <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
-    <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
-    <a href="blog.html" class="tabs"><span class="blog">Blog</span></a>
-    <a href="contact.html" class="tabs"><span class="contact">Contact</span></a>
-  </div>
-
-  <!-- Content -->
-  <article>
-    <h1>Blog</h1>
-    <hr>
-
-    <p> <strong>A Block-Chain powered SaaS Suite building collaborative ecosystem, bringing upstream and downstream synergies for Market participants globally</strong></p>
-
-		<!-- Single Unit of the Blog Container -->
-    <div class="blog-container">
-		
-			<div class="img-container">
-				<img src="images/lattice-intro.png" alt="">
-			</div>
-
-      <div class="title">
-        <h4>Lattice Protocol — The beginning of a new era!!</h4>
-      </div>
-      
-			<div class="desp">
-				<p>Sharing marketplace has seen a tremendous growth in the last decade with centralized organizations like Amazon, Freelancer enabling strangers to transact seamlessly, removing transaction friction. The success of these organizations has been…
-        </p>
-			</div>
-			<p><a href="https://medium.com/@LatticeProtocol/sharing-marketplace-has-seen-a-tremendous-growth-in-the-last-decade-with-centralized-organizations-6f9ad787b65d" target="_blank" class="button">READ MORE</a></p>
+    <div id="myTab" class="tab-box">
+      <a href="javascript:void(0);" class="menu selected" onclick="showMenu()">&#9776;</a>
+      <a href="index.html" class="tabs"><span class="home">Home</span></a>
+      <a href="product.html" class="tabs"><span class="product">Product</span></a>
+      <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
+      <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
+      <a href="blog.html" class="tabs"><span class="blog">Blog</span></a>
+      <a href="contact.html" class="tabs"><span class="contact">Contact</span></a>
     </div>
 
+    <!-- Content -->
+    <article>
+      <h1>Blog</h1>
+      <hr>
 
-		<div class="blog-container">
+      <p> <strong>A Block-Chain powered SaaS Suite building collaborative ecosystem, bringing upstream and downstream synergies for Market participants globally</strong></p>
 
-			<div class="img-container">
-				<img src="images/lattice-research.png" alt="">
-			</div>
+      <!-- Single Unit of the Blog Container -->
+      <div class="blog-container">
+      
+        <div class="img-container">
+          <img src="images/lattice-intro.png" alt="">
+        </div>
 
-      <div class="title">
-        <h4>Lattice Protocol — The Research</h4>
+        <div class="title">
+          <h4>Lattice Protocol — The beginning of a new era!!</h4>
+        </div>
+        
+        <div class="desp">
+          <p>Sharing marketplace has seen a tremendous growth in the last decade with centralized organizations like Amazon, Freelancer enabling strangers to transact seamlessly, removing transaction friction. The success of these organizations has been…
+          </p>
+        </div>
+        <p><a href="https://medium.com/@LatticeProtocol/sharing-marketplace-has-seen-a-tremendous-growth-in-the-last-decade-with-centralized-organizations-6f9ad787b65d" target="_blank" class="button">READ MORE</a></p>
       </div>
 
-			<div class="desp">
-				<p>Lattice recently concluded a research on e-Sellers and small Businesses to spot the challenges they face in current ecosystem. The survey was conducted across 3 countries and 12 cities which included 1st, 2nd and 3rd tier participants. <br><br>
-            The survey participants were initially asked open ended questions, but then to bring in objectivity to the discussion, a 15 parameter challenge list was presented from amongst the common list which evolved out of the initial discussion.</p>
-			</div>
-			<p><a href="https://medium.com/@LatticeProtocol/94-of-the-participants-responded-to-brand-identity-as-a-critical-factor-to-e-success-but-felt-the-87dc00fd73ea" target="_blank" class="button">READ MORE</a></p>
-		</div>
 
-			
-		<div class="blog-container">
+      <div class="blog-container">
 
-			<div class="img-container">
-				<img src="images/cat_typing.gif" alt="">
-			</div>
+        <div class="img-container">
+          <img src="images/lattice-research.png" alt="">
+        </div>
 
-      <div class="title">
-        <h4>A view on the issues faced by current marketplace models:</h4>
+        <div class="title">
+          <h4>Lattice Protocol — The Research</h4>
+        </div>
+
+        <div class="desp">
+          <p>Lattice recently concluded a research on e-Sellers and small Businesses to spot the challenges they face in current ecosystem. The survey was conducted across 3 countries and 12 cities which included 1st, 2nd and 3rd tier participants. <br><br>
+              The survey participants were initially asked open ended questions, but then to bring in objectivity to the discussion, a 15 parameter challenge list was presented from amongst the common list which evolved out of the initial discussion.</p>
+        </div>
+        <p><a href="https://medium.com/@LatticeProtocol/94-of-the-participants-responded-to-brand-identity-as-a-critical-factor-to-e-success-but-felt-the-87dc00fd73ea" target="_blank" class="button">READ MORE</a></p>
       </div>
 
-			<div class="desp">
-				<p>When the world speaks about Collaboration, Brands, and Targeted Positioning, the current marketplaces stands completely antagonistic to most of these views. Couple it with the cases of information privacy breach, it really poses a big question on the existing models and subconsciously raises a desire for a supermodel that can save the next gen marketplace goers.</p>
-			</div>
-			<p><a href="https://medium.com/@LatticeProtocol/lattices-view-on-the-issues-faced-by-current-marketplace-models-41cb24e1d92f" target="_blank" class="button">READ MORE</a></p>
-		</div>
+        
+      <div class="blog-container">
 
-
-
-  </article>
-
-
-
-  <!-- Footer -->
-
-  <footer>
-      <div class="row footer-stuff">
-        <div class="columns three cap"><strong>FIND US ON</strong>
-          <ul>
-            <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
-            <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
-            <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
-          </ul>
+        <div class="img-container">
+          <img src="images/cat_typing.gif" alt="">
         </div>
-        <div class="columns three cap"><strong>MORE LINKS</strong>
-          <ul>
-            <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
-          </ul>
+
+        <div class="title">
+          <h4>A view on the issues faced by current marketplace models:</h4>
         </div>
-        <div class="columns six cap">
-          <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
-          <form action="" class="row">
-            <div class="columns eight">
-              <input type="email" placeholder="Your Email" class="u-full-width">
-            </div>
-            <div class="columns four">
-              <input type="submit" value="SUMBIT" class="button-primary">
-            </div>
-          </form>
+
+        <div class="desp">
+          <p>When the world speaks about Collaboration, Brands, and Targeted Positioning, the current marketplaces stands completely antagonistic to most of these views. Couple it with the cases of information privacy breach, it really poses a big question on the existing models and subconsciously raises a desire for a supermodel that can save the next gen marketplace goers.</p>
         </div>
+        <p><a href="https://medium.com/@LatticeProtocol/lattices-view-on-the-issues-faced-by-current-marketplace-models-41cb24e1d92f" target="_blank" class="button">READ MORE</a></p>
       </div>
-    </footer>
 
-</section>
+
+
+    </article>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="row footer-stuff">
+          <div class="columns three cap"><strong>FIND US ON</strong>
+            <ul>
+              <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
+              <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
+              <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="columns three cap"><strong>MORE LINKS</strong>
+            <ul>
+              <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
+            </ul>
+          </div>
+          <div class="columns six cap">
+            <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
+            <form action="" class="row">
+              <div class="columns eight">
+                <input type="email" placeholder="Your Email" class="u-full-width">
+              </div>
+              <div class="columns four">
+                <input type="submit" value="SUBMIT" class="button-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+  </section>
     
+  <script src="js/menuToggle.js"></script>
 
 </body>
 </html>

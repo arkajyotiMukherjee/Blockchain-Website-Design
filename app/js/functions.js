@@ -44,38 +44,42 @@ $(window).scroll(function(){
 
   //periscope
 
-  if(wScroll > $('.large-window').offset().top - $(window).height()){
+  // if(wScroll > $('.large-window').offset().top - $(window).height()){
 
-    var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll/5);
+  //   var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll/5);
   
-    $('.large-window').css({'background-position' : 'center '+ (wScroll - $('.large-window').offset().top) +'px'})
+  //   $('.large-window').css({'background-position' : 'center '+ (wScroll - $('.large-window').offset().top) +'px'})
 
-    $('.window-tint').css({'opacity': opacity})
-  }
+  //   $('.window-tint').css({'opacity': opacity})
+  // }
 
 
   //Blog posts
 
-  if(wScroll > $('.blog-posts').offset().top - $(window).height()){
+  if(wScroll > $('.blog-posts').offset().top - $(window).height() && ($(window).width() > 800)){
 
     var offset = Math.min(0, wScroll - $('.blog-posts').offset().top + $(window).height() - 400)
     
     $('.post-1').css({'transform': 'translate('+offset+'px,' +Math.abs(offset * 0.3)+'px)'})
 
     $('.post-3').css({'transform': 'translate('+ Math.abs(offset)+'px,' +Math.abs(offset * 0.3)+'px)'})
+  }else{
+    $('.post-1').css({'transform': 'translate('+ 0 +'px)'})
+    
+    $('.post-3').css({'transform': 'translate('+ 0 +'px)'})
   }
 
 
   //scroll to the bottom
   
   if ((Math.ceil(wScroll) == ($(document).height() - $(window).height())) && showOnce === 1) {
-    console.log("bottom");
+    // console.log("bottom");
     showOnce = 0;
 
     modal.css("display","block");
 
-    console.log($(window).scrollTop());
-    console.log($(document).height() - $(window).height());
+    // console.log($(window).scrollTop());
+    // console.log($(document).height() - $(window).height());
     
     
   }
