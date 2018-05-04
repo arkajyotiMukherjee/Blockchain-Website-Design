@@ -871,7 +871,7 @@ img {
   height: 687px;
   background-size: cover;
   background-color: #000816;
-  background-image: url(../images/LP_header_resized.min.dark.png);
+  background-image: url(../images/LP_header_resized-blacked.png);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
