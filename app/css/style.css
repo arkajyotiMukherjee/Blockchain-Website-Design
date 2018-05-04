@@ -1067,8 +1067,8 @@ input {
   background: #000816;
   z-index: 5;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: 'home product documents blog contact'; }
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: 'home product documents blog contact dex demo_login'; }
 
 .tabs {
   color: #f1f1f1;
@@ -1101,6 +1101,13 @@ a {
 
 .contact {
   grid-area: contact; }
+  
+.dex {
+  grid-area: dex; }
+  
+.demo_login {
+  grid-area : demo_login;
+}
 
 .post, .row > figure {
   box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 1em rgba(0, 0, 0, 0.19) !important; }
