@@ -1,87 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="images/logographic.png">
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <!-- build:css css/style.min.css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endbuild -->
-    <title>Product</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="images/logographic.png">
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <!-- build:css css/style.min.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endbuild -->
+  <title>Product</title>
 </head>
+
 <body>
 
-    <style>
-    
-              
-      .product-content{
-        z-index: 4;
-        position: absolute;
-        width: 100%;
+  <script>
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (!isMobile()) {
+      function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'js/product.js';
+        document.body.appendChild(script);
+        console.log('loadScript');
       }
 
-      body{
-        background-color: #fff;
-        background-size: 100%;
-        text-align: center;
-        margin: 0px;
-        overflow-x: hidden;
-      }
-      
-      /* test style */
-      .foo{
-        position: relative;
-        height: 800px;
+      function initialize() {
+        console.log('initialize');
       }
 
-      footer{
-        position: relative;
-      }
-      
-    </style>
+      window.onload = loadScript;
+    }
+  </script>
 
-    <!-- // three.js - https://github.com/mrdoob/three.js
+  <style>
+    .product-content {
+      z-index: 4;
+      position: absolute;
+      width: 100%;
+    }
+
+    body {
+      background-color: #fff;
+      background-size: 100%;
+      text-align: center;
+      margin: 0px;
+      overflow-x: hidden;
+    }
+
+    /* test style */
+
+    .foo {
+      position: relative;
+      height: 800px;
+    }
+
+    footer {
+      position: relative;
+    }
+
+    .head-name {
+      color: #f1f1f1
+    }
+  </style>
+
+  <!-- // three.js - https://github.com/mrdoob/three.js
 var THREE=THREE||{REVISION:"56"} -->
 
-<section class="product-content">
+  <section class="product-content">
 
-  <!-- Tab box -->
+    <!-- Tab box -->
 
-  <div id="myTab" class="tab-box">
-    <a href="javascript:void(0);" class="menu selected" onclick="showMenu()">&#9776;</a>
-    <a href="index.html" class="tabs"><span class="home">Home</span></a>
-    <a href="product.html" class="tabs"><span class="product">Product</span></a>
-    <a href="documents.html" class="tabs"><span class="documents">Documents</span></a>
-    <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
-    <a href="blog.html" class="tabs"><span class="blog">Blog</span></a>
-    <a href="contact.html" class="tabs"><span class="contact">Contact</span></a>
-  </div>
+    <div id="myTab" class="tab-box">
+      <a href="javascript:void(0);" class="menu selected" onclick="showMenu()">
+        <p class="head-name">Lattice Protocol</p>&#9776;</a>
+      <a href="index.html" class="tabs">
+        <span class="home">Home</span>
+      </a>
+      <a href="product.html" class="tabs">
+        <span class="product">Product</span>
+      </a>
+      <a href="documents.html" class="tabs">
+        <span class="documents">Documents</span>
+      </a>
+      <!-- <a href="#" class="tabs"><span class="partners">Partners</span></a> -->
+      <a href="blog.html" class="tabs">
+        <span class="blog">Blog</span>
+      </a>
+      <a href="contact.html" class="tabs">
+        <span class="contact">Contact</span>
+      </a>
+    </div>
 
-  <div class="foo"></div>
+    <div class="foo"></div>
 
-  <!-- Footer -->
+    <!-- Footer -->
 
-  <footer>
+    <footer>
       <div class="row footer-stuff">
-        <div class="columns three cap"><strong>FIND US ON</strong>
+        <div class="columns three cap">
+          <strong>FIND US ON</strong>
           <ul>
-            <li><a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a></li>
-            <li><a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a></li>
-            <li><a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a></li>
+            <li>
+              <a href="https://t.me/joinchat/HJKDHw0xbQwBHSz5HZqhvw" target="_blank">Telegram</a>
+            </li>
+            <li>
+              <a href="https://medium.com/@LatticeProtocol" target="_blank">Medium</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/13692883/" target="_blank">LinkedIn</a>
+            </li>
           </ul>
         </div>
-        <div class="columns three cap"><strong>MORE LINKS</strong>
+        <div class="columns three cap">
+          <strong>MORE LINKS</strong>
           <ul>
-            <li><a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a></li>
+            <li>
+              <a href="https://www.facebook.com/LatticeProtocol/" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/LatticeProtocol" target="_blank">Twitter</a>
+            </li>
           </ul>
         </div>
         <div class="columns six cap">
-          <p class="footer-para"><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iste minus repudiandae in odio fugit illo debitis. Nulla, culpa.</p>
+          <p class="footer-para">
+            <strong>Sign Up for the newsletter</strong> The Future of a Collaborative Economy is about to change</p>
           <form action="" class="row">
             <div class="columns eight">
               <input type="email" placeholder="Your Email" class="u-full-width">
@@ -94,10 +144,11 @@ var THREE=THREE||{REVISION:"56"} -->
       </div>
     </footer>
 
-</section>
-<script src="js/product.js"></script>
+  </section>
+  <script src="js/product.js"></script>
 
-<script src="js/menuToggle.js"></script>
+  <script src="js/menuToggle.js"></script>
 
 </body>
+
 </html>
