@@ -11,18 +11,11 @@ $(window).scroll(function(){
   
   //top parallax
   if($(window).width() > 800 ){
-    $('.globe').css({
+    $('.heading').css({
         'transform' : 'translate(0px, ' + wScroll/10 + '%)'
     })
   }
   
-  // $('.back-img').css({
-  //     'transform' : 'translate(0px, '+ wScroll/4 + '%)'
-  // })
-
-  // $('.logo').css({
-  //     'transform' : 'translate(0px, -'+ wScroll/100 + '%)'
-  // })
 
   // if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
 
@@ -73,16 +66,9 @@ $(window).scroll(function(){
 
   //scroll to the bottom
   
-  if ((Math.ceil(wScroll) == ($(document).height() - $(window).height())) && showOnce === 1) {
-    // console.log("bottom");
+  if ((Math.ceil(wScroll) > (($(document).height() - $(window).height()) - 100)) && showOnce === 1) {
     showOnce = 0;
-
     modal.css("display","block");
-
-    // console.log($(window).scrollTop());
-    // console.log($(document).height() - $(window).height());
-    
-    
   }
 
 })

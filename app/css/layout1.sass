@@ -67,24 +67,36 @@ img
   background: 
     size: cover
     color: $accent-color
-    // image: url(../images/LP_header_resized.min.dark.png)
+    image: url(../images/LP_header_resized.min.dark.png)
     position: top center
     attachment: fixed
   overflow: hidden
   z-index: 4
 
-#head_vd
-  width: 100%
-  height: 100%
+  animation-name: glow
+  animation-duration: 3s
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  
 
-.globe
+@keyframes glow
+  0%
+    filter: contrast(1.2) brightness(1)
+    
+  50%
+    filter: contrast(1.5) brightness(1.5)
+  100%
+    filter: contrast(1.2) brightness(1)
+
+
+
+// #head_vd
+//   width: 100%
+//   height: 100%
+
+.heading
   height: 600px
   width: 100%
-  // background:
-  //   size: contain
-  //   image: url(../images/globeImg.png)
-  //   position: center
-  //   repeat: no-repeat
   position: absolute
   top: 30%
   left: 5%
@@ -117,31 +129,17 @@ img
   
 
 
-
-// .logo
+// .back-img
 //   width: 100%
-//   height: 200px
-//   background:
-//     size: contain 
-//     image: url(../images/logographic.png)
+//   height: 100%
+//   background: 
+//     size: cover
+//     //image: url(../images/LP_header_resized.min.dark.png)
 //     repeat: no-repeat
-//     position: bottom
+//     position: top center
+//     attachment: fixed
 //   position: absolute
-//   left: 1.5%
-//   margin-left: -12px
-//   top: 500px
-
-.back-img
-  width: 100%
-  height: 100%
-  background: 
-    size: cover
-    //image: url(../images/LP_header_resized.min.dark.png)
-    repeat: no-repeat
-    position: top center
-    attachment: fixed
-  position: absolute
-  // filter: blur(3px)
+//   // filter: blur(3px)
 
 .lattice-intro
   text-transform: none
@@ -264,6 +262,7 @@ img
     width: 100%
     height: 200px
     overflow: hidden
+    margin: 16px 0
 
     img
 
@@ -615,7 +614,7 @@ hr
   //   display: none
 
 
-  .globe
+  .heading
     font-size: 50px
 
   .lattice-intro
@@ -645,6 +644,7 @@ hr
   .content
     margin-bottom: 0px
 
-  .head-box
-    background-image: url(../images/LP_header_resized.min.dark.png)
+  .links > ul > li
+    padding: 10px
+
 
