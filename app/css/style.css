@@ -1374,3 +1374,9 @@ td {
     left: -14.14px; }
   .roadmap::before {
     top: 25px; } }
+
+@media (max-width: 375px) {
+  .right .roadmap-item h6 table .line-2 div {
+    width: 90px; }
+  .left .roadmap-item h6 table .line-1 div {
+    width: 90px; } }
