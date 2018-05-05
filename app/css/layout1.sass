@@ -18,8 +18,9 @@ body
 
 h1
   color: $h1-color
-  font-weight: bold
+  // font-weight: bold
   user-select: none
+  font-family: 'GaramondPremrPro-Disp'
 
 p
   color: $secondary-color
@@ -67,7 +68,7 @@ img
   background: 
     size: cover
     color: $accent-color
-    image: url(../images/LP_header_resized-blacked.png)
+    image: url(../images/LP_header_resized.min.dark.png)
     position: top center
     attachment: fixed
   overflow: hidden
@@ -84,7 +85,7 @@ img
     filter: contrast(1.2) brightness(1)
     
   50%
-    filter: contrast(1.5) brightness(1.5)
+    filter: contrast(1) brightness(1.2)
   100%
     filter: contrast(1.2) brightness(1)
 
@@ -146,43 +147,46 @@ img
   font-weight: normal
   font-size: 16px
 
-.team, .advisors
-  width: 100%
-  margin: 0 auto
-  figure
-    margin-bottom: 20px
-    position: relative
-    opacity: 0
-    transform: translateX(30px)
-    transition: all 0.4s ease-in-out
-    overflow: hidden
-    cursor: pointer
+// .team, .advisors
+//   width: 100%
+//   margin: 0 auto
+//   figure
+//     margin-bottom: 20px
+//     position: relative
+//     opacity: 0
+//     transform: translateX(30px)
+//     transition: all 0.4s ease-in-out
+//     overflow: hidden
+//     cursor: pointer
 
-    &.is-showing
-      opacity: 1
-      transform: translateX(0px)
+//     &.is-showing
+//       opacity: 1
+//       transform: translateX(0px)
 
-    img
-      display: block
-      transition: all 0.3s ease-in-out
-      transform: scale(1) 
+//     img
+//       display: block
+//       transition: all 0.3s ease-in-out
+//       transform: scale(1) 
 
-    &:hover
-      figcaption
-        left: 0%
+//     &:hover
+//       figcaption
+//         left: 0%
       
-      img
-        transform: scale(1.1)
+//       img
+//         transform: scale(1.1)
 
-    figcaption
-      position: relative
-      bottom: 0px
-      // left: -100%
-      background: $secondary-color
-      color: $primary-color
-      padding: 0px 8px
-      font-size: 14px
-      transition: all 0.3s ease-in-out
+//     figcaption
+//       position: relative
+//       bottom: 0px
+//       // left: -100%
+//       background: $secondary-color
+//       color: $primary-color
+//       padding: 0px 8px
+//       font-size: 14px
+//       transition: all 0.3s ease-in-out
+
+// .team-desp
+//   padding: 20px
 
 //periscope
 .large-window
@@ -398,13 +402,6 @@ a
 .tab-box
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 
-.ecosystem, .roadmap
-  position: relative
-
-
-
-.team-desp
-  padding: 20px
 
 .float-btn
   width: 70px
@@ -419,14 +416,13 @@ a
 
 
 .telegram-logo
-  position: relative
-  left: 10%
-  top: 15%
-  fill: $telegram-color
+  color: $telegram-color
+  font-size: 50px
+  list-style: none
+  padding: 12px 0 0 10px
 
 .telegram-logo:hover
-  fill: $telegram-selected-color
-
+  color: $telegram-selected-color
 
 
 //Subscription box

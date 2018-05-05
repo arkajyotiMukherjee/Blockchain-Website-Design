@@ -1,0 +1,116 @@
+.roadmap-container *
+  box-sizing: border-box
+  
+.left
+  left: 0
+
+.right
+  left: 50%
+
+.roadmap
+  position: relative
+  overflow: hidden
+  padding: 18px 40px
+  position: relative
+  background-color: inherit
+  width: 50%
+  text-align: left
+
+.roadmap-item h6 table td 
+  font-size: 16px
+  text-transform: uppercase
+  font-family: "DINPro"
+
+.line-1 div
+  width: 20px
+  height: 3px
+  border: 1px solid red
+  padding: 0px
+  box-sizing: border-box
+  background-color: red
+
+.line-2 div
+  width: 250px
+  height: 3px
+  border: 1px solid blue
+  padding: 0px
+  box-sizing: border-box
+  background-color: blue
+
+
+.roadmap-container::after
+  content: ''
+  width: 0
+  border-left: 2px solid black
+  position: absolute
+  top: -10px
+  bottom: 10px
+  left: 50%
+  box-sizing: border-box
+
+.roadmap-container
+  position: relative
+
+.roadmap-item
+  padding: 3px
+  position: relative
+  font-size: 14px
+  font-family: "BasicGothicPro"
+
+.roadmap::before
+  content: ""
+  width: 20px
+  height: 20px
+  transform: rotate(45deg)
+  background-color: black
+  border: 1px solid black
+  position: absolute
+  top: 35px
+
+.roadmap.left::before
+  left: 98%
+
+.roadmap.right::before
+  left: -1.8%
+
+td.time
+  width: 110px
+  text-align: center
+  padding: 0 10px
+
+td
+  padding: 0
+  
+@media(max-width: 1020px)
+  
+  .roadmap
+    width: 100%
+    left: 0
+
+  .roadmap-container::after
+    left: 0
+
+  .right .roadmap-item h6 table .line-1 div
+    width: 20px
+
+  .right .roadmap-item h6 table .line-2 div
+    width: 140px
+
+  .left .roadmap-item h6 table .line-2 div
+    width: 20px
+    border: 1px solid red
+    background-color: red
+
+  .left .roadmap-item h6 table .line-1 div
+    width: 140px
+    border: 1px solid blue
+    background-color: blue
+
+  .roadmap.left::before
+    left: -14.14px
+
+  .roadmap.right::before
+    left: -14.14px
+
+  .roadmap::before
+    top: 25px

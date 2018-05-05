@@ -829,8 +829,8 @@ body {
 
 h1 {
   color: #383c42;
-  font-weight: bold;
-  user-select: none; }
+  user-select: none;
+  font-family: 'GaramondPremrPro-Disp'; }
 
 p {
   color: black;
@@ -871,7 +871,7 @@ img {
   height: 687px;
   background-size: cover;
   background-color: #000816;
-  background-image: url(../images/LP_header_resized-blacked.png);
+  background-image: url(../images/LP_header_resized.min.dark.png);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
@@ -885,7 +885,7 @@ img {
   0% {
     filter: contrast(1.2) brightness(1); }
   50% {
-    filter: contrast(1.5) brightness(1.5); }
+    filter: contrast(1) brightness(1.2); }
   100% {
     filter: contrast(1.2) brightness(1); } }
 
@@ -926,37 +926,6 @@ img {
   text-transform: none;
   font-weight: normal;
   font-size: 16px; }
-
-.team, .advisors {
-  width: 100%;
-  margin: 0 auto; }
-  .team figure, .advisors figure {
-    margin-bottom: 20px;
-    position: relative;
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.4s ease-in-out;
-    overflow: hidden;
-    cursor: pointer; }
-    .team figure.is-showing, .advisors figure.is-showing {
-      opacity: 1;
-      transform: translateX(0px); }
-    .team figure img, .advisors figure img {
-      display: block;
-      transition: all 0.3s ease-in-out;
-      transform: scale(1); }
-    .team figure:hover figcaption, .advisors figure:hover figcaption {
-      left: 0%; }
-    .team figure:hover img, .advisors figure:hover img {
-      transform: scale(1.1); }
-    .team figure figcaption, .advisors figure figcaption {
-      position: relative;
-      bottom: 0px;
-      background: black;
-      color: white;
-      padding: 0px 8px;
-      font-size: 14px;
-      transition: all 0.3s ease-in-out; }
 
 .large-window {
   height: 600px;
@@ -1109,12 +1078,6 @@ a {
 .tab-box {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
-.ecosystem, .roadmap {
-  position: relative; }
-
-.team-desp {
-  padding: 20px; }
-
 .float-btn {
   width: 70px;
   height: 70px;
@@ -1127,13 +1090,13 @@ a {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important; }
 
 .telegram-logo {
-  position: relative;
-  left: 10%;
-  top: 15%;
-  fill: #021f4f; }
+  color: #021f4f;
+  font-size: 50px;
+  list-style: none;
+  padding: 12px 0 0 10px; }
 
 .telegram-logo:hover {
-  fill: #115bd8; }
+  color: #115bd8; }
 
 /* The Modal (background) */
 .modal {
@@ -1304,3 +1267,110 @@ hr {
     margin-bottom: 0px; }
   .links > ul > li {
     padding: 10px; } }
+
+.roadmap-container * {
+  box-sizing: border-box; }
+
+.left {
+  left: 0; }
+
+.right {
+  left: 50%; }
+
+.roadmap {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  text-align: left; }
+
+.roadmap-item h6 table td {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "DINPro"; }
+
+.line-1 div {
+  width: 20px;
+  height: 3px;
+  border: 1px solid red;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: red; }
+
+.line-2 div {
+  width: 250px;
+  height: 3px;
+  border: 1px solid blue;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: blue; }
+
+.roadmap-container::after {
+  content: '';
+  width: 0;
+  border-left: 2px solid black;
+  position: absolute;
+  top: -10px;
+  bottom: 10px;
+  left: 50%;
+  box-sizing: border-box; }
+
+.roadmap-container {
+  position: relative; }
+
+.roadmap-item {
+  padding: 3px;
+  position: relative;
+  font-size: 14px;
+  font-family: "BasicGothicPro"; }
+
+.roadmap::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: black;
+  border: 1px solid black;
+  position: absolute;
+  top: 35px; }
+
+.roadmap.left::before {
+  left: 98%; }
+
+.roadmap.right::before {
+  left: -1.8%; }
+
+td.time {
+  width: 110px;
+  text-align: center;
+  padding: 0 10px; }
+
+td {
+  padding: 0; }
+
+@media (max-width: 1020px) {
+  .roadmap {
+    width: 100%;
+    left: 0; }
+  .roadmap-container::after {
+    left: 0; }
+  .right .roadmap-item h6 table .line-1 div {
+    width: 20px; }
+  .right .roadmap-item h6 table .line-2 div {
+    width: 140px; }
+  .left .roadmap-item h6 table .line-2 div {
+    width: 20px;
+    border: 1px solid red;
+    background-color: red; }
+  .left .roadmap-item h6 table .line-1 div {
+    width: 140px;
+    border: 1px solid blue;
+    background-color: blue; }
+  .roadmap.left::before {
+    left: -14.14px; }
+  .roadmap.right::before {
+    left: -14.14px; }
+  .roadmap::before {
+    top: 25px; } }

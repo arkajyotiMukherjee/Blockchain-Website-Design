@@ -18,7 +18,8 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "clear-cache": "gulp cache:clear"
   },
   "repository": {
     "type": "git",
