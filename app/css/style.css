@@ -1232,7 +1232,7 @@ hr {
   color: #f1f1f1;
   display: none; }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .menu {
     display: block;
     text-align: right;
