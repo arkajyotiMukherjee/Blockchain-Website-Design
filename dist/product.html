@@ -24,7 +24,7 @@
 
     if (!isMobile()) {
       function loadScript() {
-        var script = document.createElement('script');
+        let script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = 'js/product.js';
         document.body.appendChild(script);
@@ -36,6 +36,9 @@
       }
 
       window.onload = loadScript;
+    }else {
+      let product = document.querySelector(".product-content");
+      product.style.backgroundImage = "url(images/pattern_light.png)";
     }
   </script>
 
@@ -52,6 +55,13 @@
       text-align: center;
       margin: 0px;
       overflow-x: hidden;
+    }
+
+    article{
+      padding: 100px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     /* test style */
@@ -89,6 +99,10 @@ var THREE=THREE||{REVISION:"56"} -->
       <a href="demo/login" class="tabs"><span class="demo_login">Demo</span></a>
     </div>
 
+    <article>
+      <h1>Product coming soon</h1>
+    </article>
+    
     <div class="foo"></div>
 
     <!-- Footer -->

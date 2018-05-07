@@ -6,16 +6,20 @@ let modal = $('.modal');
 
 let closebtn = $('.close');
 
-$(window).scroll(function(){
+$(window).scroll(function () {
   var wScroll = $(this).scrollTop()
-  
+
   //top parallax
-  if($(window).width() > 800 ){
+  if ($(window).width() > 800) {
     $('.heading').css({
-        'transform' : 'translate(0px, ' + wScroll/10 + '%)'
+      'transform': 'translate(0px, ' + wScroll / 10 + '%)'
+    })
+
+    $('.hd-sub').css({
+      'transform': 'translate(0px, ' + wScroll / 10 + '%)'
     })
   }
-  
+
 
   // if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
 
@@ -41,7 +45,7 @@ $(window).scroll(function(){
   // if(wScroll > $('.large-window').offset().top - $(window).height()){
 
   //   var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll/5);
-  
+
   //   $('.large-window').css({'background-position' : 'center '+ (wScroll - $('.large-window').offset().top) +'px'})
 
   //   $('.window-tint').css({'opacity': opacity})
@@ -50,39 +54,47 @@ $(window).scroll(function(){
 
   //Blog posts
 
-  if(wScroll > $('.blog-posts').offset().top - $(window).height() && ($(window).width() > 800)){
+  if (wScroll > $('.blog-posts').offset().top - $(window).height() && ($(window).width() > 800)) {
 
     var offset = Math.min(0, wScroll - $('.blog-posts').offset().top + $(window).height() - 400)
-    
-    $('.post-1').css({'transform': 'translate('+offset+'px,' +Math.abs(offset * 0.3)+'px)'})
 
-    $('.post-3').css({'transform': 'translate('+ Math.abs(offset)+'px,' +Math.abs(offset * 0.3)+'px)'})
-  }else{
-    $('.post-1').css({'transform': 'translate('+ 0 +'px)'})
-    
-    $('.post-3').css({'transform': 'translate('+ 0 +'px)'})
+    $('.post-1').css({
+      'transform': 'translate(' + offset + 'px,' + Math.abs(offset * 0.3) + 'px)'
+    })
+
+    $('.post-3').css({
+      'transform': 'translate(' + Math.abs(offset) + 'px,' + Math.abs(offset * 0.3) + 'px)'
+    })
+  } else {
+    $('.post-1').css({
+      'transform': 'translate(' + 0 + 'px)'
+    })
+
+    $('.post-3').css({
+      'transform': 'translate(' + 0 + 'px)'
+    })
   }
 
 
   //scroll to the bottom
-  
+
   if ((Math.ceil(wScroll) > (($(document).height() - $(window).height()) - 100)) && showOnce === 1) {
     showOnce = 0;
-    modal.css("display","block");
+    modal.css("display", "block");
   }
 
 })
 
 // When the user clicks on <span> (x), close the modal
 
-closebtn.click(function() {
-  modal.css("display","none");
+closebtn.click(function () {
+  modal.css("display", "none");
 })
 
 // When the user clicks anywhere outside of the modal, close it
-$(window).click(function(event) {
+$(window).click(function (event) {
   if ($(event.target).hasClass('modal')) {
-    modal.css("display","none");
+    modal.css("display", "none");
   }
 })
 
