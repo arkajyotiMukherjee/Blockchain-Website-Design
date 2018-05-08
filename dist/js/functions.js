@@ -15,9 +15,6 @@ $(window).scroll(function () {
       'transform': 'translate(0px, ' + wScroll / 10 + '%)'
     })
 
-    $('.hd-sub').css({
-      'transform': 'translate(0px, ' + wScroll / 10 + '%)'
-    })
   }
 
 

@@ -926,7 +926,8 @@ img {
   float: left;
   clear: both;
   font-family: 'Raleway', sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  padding-right: 16px; }
 
 .lattice-intro {
   text-transform: none;
@@ -1273,6 +1274,10 @@ hr {
     margin-bottom: 0px; }
   .links > ul > li {
     padding: 10px; } }
+
+@media (max-width: 340px) {
+  .links > ul > li {
+    padding: 8px; } }
 
 .roadmap-container * {
   box-sizing: border-box; }
