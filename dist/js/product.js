@@ -1,4 +1,3 @@
-// three.js - https://github.com/mrdoob/three.js
 'use strict';var THREE=THREE||{REVISION:"56"};self.console=self.console||{info:function(){},log:function(){},debug:function(){},warn:function(){},error:function(){}};self.Int32Array=self.Int32Array||Array;self.Float32Array=self.Float32Array||Array;String.prototype.trim=String.prototype.trim||function(){return this.replace(/^\s+|\s+$/g,"")};
 THREE.extend=function(a,b){if(Object.keys)for(var c=Object.keys(b),d=0,e=c.length;d<e;d++){var f=c[d];Object.defineProperty(a,f,Object.getOwnPropertyDescriptor(b,f))}else for(f in c={}.hasOwnProperty,b)c.call(b,f)&&(a[f]=b[f]);return a};
 (function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.requestAnimationFrame;++c)window.requestAnimationFrame=window[b[c]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[b[c]+"CancelAnimationFrame"]||window[b[c]+"CancelRequestAnimationFrame"];void 0===window.requestAnimationFrame&&(window.requestAnimationFrame=function(b){var c=Date.now(),f=Math.max(0,16-(c-a)),g=window.setTimeout(function(){b(c+f)},f);a=c+f;return g});window.cancelAnimationFrame=window.cancelAnimationFrame||
@@ -709,156 +708,153 @@ fragmentShader:"uniform vec3 color;\nuniform sampler2D map;\nuniform float opaci
 var SEPARATION = 100,
         AMOUNTX = 100,
         AMOUNTY = 70;
- 
-    var container;
+
+     var container;
     var camera, scene, renderer;
- 
-    var particles, particle, count = 0;
- 
-    var mouseX = 85,
+
+     var particles, particle, count = 0;
+
+     var mouseX = 85,
         mouseY = -342;
- 
-    var windowHalfX = window.innerWidth / 2;
+
+     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
- 
-    init();
+
+     init();
     animate();
- 
-    function init() {
- 
-        container = document.createElement('div');
+
+     function init() {
+
+         container = document.createElement('div');
         document.body.appendChild(container);
- 
-        camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
+
+         camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
         camera.position.z = 1000;
- 
-        scene = new THREE.Scene();
- 
-        particles = new Array();
- 
-        var PI2 = Math.PI * 2;
+
+         scene = new THREE.Scene();
+
+         particles = new Array();
+
+         var PI2 = Math.PI * 2;
         var material = new THREE.ParticleCanvasMaterial({
- 
-            color: 0x000,
+
+             color: 0x000,
             program: function(context) {
- 
-                context.beginPath();
+
+                 context.beginPath();
                 context.arc(0, 0, .6, 0, PI2, true);
                 context.fill();
- 
-            }
- 
-        });
- 
-        var i = 0;
- 
-        for (var ix = 0; ix < AMOUNTX; ix++) {
- 
-            for (var iy = 0; iy < AMOUNTY; iy++) {
- 
-                particle = particles[i++] = new THREE.Particle(material);
+
+             }
+
+         });
+
+         var i = 0;
+
+         for (var ix = 0; ix < AMOUNTX; ix++) {
+
+             for (var iy = 0; iy < AMOUNTY; iy++) {
+
+                 particle = particles[i++] = new THREE.Particle(material);
                 particle.position.x = ix * SEPARATION - ((AMOUNTX * SEPARATION) / 2);
                 particle.position.z = iy * SEPARATION - ((AMOUNTY * SEPARATION) / 2);
                 scene.add(particle);
- 
-            }
- 
-        }
- 
-        renderer = new THREE.CanvasRenderer();
+
+             }
+
+         }
+
+         renderer = new THREE.CanvasRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         container.appendChild(renderer.domElement);
- 
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
- 
-        //
- 
-        window.addEventListener('resize', onWindowResize, false);
- 
-    }
- 
-    function onWindowResize() {
- 
-        windowHalfX = window.innerWidth / 2;
+
+
+         window.addEventListener('resize', onWindowResize, false);
+
+     }
+
+     function onWindowResize() {
+
+         windowHalfX = window.innerWidth / 2;
         windowHalfY = window.innerHeight / 2;
- 
-        camera.aspect = window.innerWidth / window.innerHeight;
+
+         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
- 
-        renderer.setSize(window.innerWidth, window.innerHeight);
- 
-    }
- 
-    //
- 
-    function onDocumentMouseMove(event) {
- 
-        mouseX = event.clientX - windowHalfX;
+
+         renderer.setSize(window.innerWidth, window.innerHeight);
+
+     }
+
+
+     function onDocumentMouseMove(event) {
+
+         mouseX = event.clientX - windowHalfX;
         mouseY = event.clientY - windowHalfY;
- 
-    }
- 
-    function onDocumentTouchStart(event) {
- 
-        if (event.touches.length === 1) {
- 
-            event.preventDefault();
- 
-            mouseX = event.touches[0].pageX - windowHalfX;
+
+     }
+
+     function onDocumentTouchStart(event) {
+
+         if (event.touches.length === 1) {
+
+             event.preventDefault();
+
+             mouseX = event.touches[0].pageX - windowHalfX;
             mouseY = event.touches[0].pageY - windowHalfY;
- 
-        }
- 
-    }
- 
-    function onDocumentTouchMove(event) {
- 
-        if (event.touches.length === 1) {
- 
-            event.preventDefault();
- 
-            mouseX = event.touches[0].pageX - windowHalfX;
+
+         }
+
+     }
+
+     function onDocumentTouchMove(event) {
+
+         if (event.touches.length === 1) {
+
+             event.preventDefault();
+
+             mouseX = event.touches[0].pageX - windowHalfX;
             mouseY = event.touches[0].pageY - windowHalfY;
- 
-        }
- 
-    }
- 
-    //
- 
-    function animate() {
- 
-        requestAnimationFrame(animate);
- 
-        render();
- 
- 
-    }
- 
-    function render() {
- 
-        camera.position.x += (mouseX - camera.position.x) * .05;
+
+         }
+
+     }
+
+
+     function animate() {
+
+         requestAnimationFrame(animate);
+
+         render();
+
+
+      }
+
+     function render() {
+
+         camera.position.x += (mouseX - camera.position.x) * .05;
         camera.position.y += (-mouseY - camera.position.y) * .05;
         camera.lookAt(scene.position);
- 
-        var i = 0;
- 
-        for (var ix = 0; ix < AMOUNTX; ix++) {
- 
-            for (var iy = 0; iy < AMOUNTY; iy++) {
- 
-                particle = particles[i++];
+
+         var i = 0;
+
+         for (var ix = 0; ix < AMOUNTX; ix++) {
+
+             for (var iy = 0; iy < AMOUNTY; iy++) {
+
+                 particle = particles[i++];
                 particle.position.y = (Math.sin((ix + count) * 0.3) * 50) + (Math.sin((iy + count) * 0.5) * 50);
                 particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;
- 
-            }
- 
-        }
- 
-        renderer.render(scene, camera);
- 
-        count += 0.1;
- 
-    }
+
+             }
+
+         }
+
+         renderer.render(scene, camera);
+
+         count += 0.1;
+
+     }
