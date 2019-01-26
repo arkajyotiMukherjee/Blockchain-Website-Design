@@ -69,26 +69,26 @@ img
   background: 
     size: cover
     color: $accent-color
-    image: url(../images/LP_header_resized.min.dark.png)
+    image: url(../images/blockchain01.jpg)
     position: top center
     attachment: fixed
   overflow: hidden
   z-index: 4
 
-  animation-name: glow
-  animation-duration: 3s
-  animation-timing-function: linear
-  animation-iteration-count: infinite
+  // animation-name: glow
+  // animation-duration: 3s
+  // animation-timing-function: linear
+  // animation-iteration-count: infinite
   
 
-@keyframes glow
-  0%
-    filter: contrast(1.2) brightness(1)
+// @keyframes glow
+//   0%
+//     filter: contrast(1.2) brightness(1)
     
-  50%
-    filter: contrast(1) brightness(1.2)
-  100%
-    filter: contrast(1.2) brightness(1)
+//   50%
+//     filter: contrast(1) brightness(1.2)
+//   100%
+//     filter: contrast(1.2) brightness(1)
 
 
 
@@ -156,46 +156,46 @@ img
   font-weight: normal
   font-size: 16px
 
-// .team, .advisors
-//   width: 100%
-//   margin: 0 auto
-//   figure
-//     margin-bottom: 20px
-//     position: relative
-//     opacity: 0
-//     transform: translateX(30px)
-//     transition: all 0.4s ease-in-out
-//     overflow: hidden
-//     cursor: pointer
+.team
+  width: 100%
+  margin: 0 auto
+  figure
+    margin-bottom: 20px
+    position: relative
+    opacity: 0
+    transform: translateX(30px)
+    transition: all 0.4s ease-in-out
+    overflow: hidden
+    cursor: pointer
 
-//     &.is-showing
-//       opacity: 1
-//       transform: translateX(0px)
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
 
-//     img
-//       display: block
-//       transition: all 0.3s ease-in-out
-//       transform: scale(1) 
+    img
+      display: block
+      transition: all 0.3s ease-in-out
+      transform: scale(1) 
 
-//     &:hover
-//       figcaption
-//         left: 0%
+    &:hover
+      figcaption
+        left: 0%
       
-//       img
-//         transform: scale(1.1)
+      img
+        transform: scale(1.1)
 
-//     figcaption
-//       position: relative
-//       bottom: 0px
-//       // left: -100%
-//       background: $secondary-color
-//       color: $primary-color
-//       padding: 0px 8px
-//       font-size: 14px
-//       transition: all 0.3s ease-in-out
+    figcaption
+      position: relative
+      bottom: 0px
+      // left: -100%
+      background: $secondary-color
+      color: $primary-color
+      padding: 0px 8px
+      font-size: 14px
+      transition: all 0.3s ease-in-out
 
-// .team-desp
-//   padding: 20px
+.team-desp
+  padding: 20px
 
 //periscope
 .large-window
@@ -203,7 +203,7 @@ img
   width: 600px
   border-radius: 50%
   background: 
-    image: url("../images/LPx-Artboard 1-500px.png")
+    image: url("../images/Big_data.jpg")
     repeat: repeat-y
     position: center 0px
     size: contain
@@ -368,7 +368,7 @@ input
   background: $accent-color
   z-index: 5
   display: grid
-  grid-template-columns: repeat(12, 1fr) 
+  grid-template-columns: repeat(15, 1fr) 
 
 
 .tabs
@@ -459,14 +459,14 @@ a
   padding: 0
   width: 600px
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
-  -webkit-animation-name: animatetop
+  -webkit-animation-name: droptop
   -webkit-animation-duration: 0.4s
-  animation-name: animatetop
+  animation-name: droptop
   animation-duration: 0.4s
 
 
 /* Add Animation
-@-webkit-keyframes animatetop
+@-webkit-keyframes droptop
   from
     top: -300px
     opacity: 0
@@ -476,7 +476,7 @@ a
     opacity: 1
 
 
-@keyframes animatetop
+@keyframes droptop
   from
     top: -300px
     opacity: 0

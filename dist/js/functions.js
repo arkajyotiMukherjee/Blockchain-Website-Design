@@ -16,15 +16,26 @@ $(window).scroll(function () {
   }
 
 
+  if(wScroll > $('.team').offset().top - ($(window).height() / 1.2)){
+
+    $('.team figure').each(function (i) {
+        setTimeout(function () {
+            $('.team figure').eq(i).addClass('is-showing')
+        }, (700 * Math.exp(i*0.14) - 700))
+    })
+  }
 
 
 
 
+    if(wScroll > $('.large-window').offset().top - $(window).height()){
 
+    var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll/5);
 
+    $('.large-window').css({'background-position' : 'center '+ (wScroll - $('.large-window').offset().top) +'px'})
 
-
-
+    $('.window-tint').css({'opacity': opacity})
+  }
 
 
 

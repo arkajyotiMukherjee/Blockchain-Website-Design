@@ -870,23 +870,11 @@ img {
   height: 687px;
   background-size: cover;
   background-color: #000816;
-  background-image: url(../images/LP_header_resized.min.dark.png);
+  background-image: url(../images/blockchain01.jpg);
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
-  z-index: 4;
-  animation-name: glow;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; }
-
-@keyframes glow {
-  0% {
-    filter: contrast(1.2) brightness(1); }
-  50% {
-    filter: contrast(1) brightness(1.2); }
-  100% {
-    filter: contrast(1.2) brightness(1); } }
+  z-index: 4; }
 
 .heading {
   height: 600px;
@@ -934,11 +922,45 @@ img {
   font-weight: normal;
   font-size: 16px; }
 
+.team {
+  width: 100%;
+  margin: 0 auto; }
+  .team figure {
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer; }
+    .team figure.is-showing {
+      opacity: 1;
+      transform: translateX(0px); }
+    .team figure img {
+      display: block;
+      transition: all 0.3s ease-in-out;
+      transform: scale(1); }
+    .team figure:hover figcaption {
+      left: 0%; }
+    .team figure:hover img {
+      transform: scale(1.1); }
+    .team figure figcaption {
+      position: relative;
+      bottom: 0px;
+      background: black;
+      color: white;
+      padding: 0px 8px;
+      font-size: 14px;
+      transition: all 0.3s ease-in-out; }
+
+.team-desp {
+  padding: 20px; }
+
 .large-window {
   height: 600px;
   width: 600px;
   border-radius: 50%;
-  background-image: url("../images/LPx-Artboard 1-500px.png");
+  background-image: url("../images/Big_data.jpg");
   background-repeat: repeat-y;
   background-position: center 0px;
   background-size: contain;
@@ -1046,7 +1068,7 @@ input {
   background: #000816;
   z-index: 5;
   display: grid;
-  grid-template-columns: repeat(12, 1fr); }
+  grid-template-columns: repeat(15, 1fr); }
 
 .tabs {
   color: #f1f1f1;
@@ -1127,13 +1149,13 @@ a {
   padding: 0;
   width: 600px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
+  -webkit-animation-name: droptop;
   -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
+  animation-name: droptop;
   animation-duration: 0.4s; }
 
 /* Add Animation */
-@-webkit-keyframes animatetop {
+@-webkit-keyframes droptop {
   from {
     top: -300px;
     opacity: 0; }
@@ -1141,7 +1163,7 @@ a {
     top: 0;
     opacity: 1; } }
 
-@keyframes animatetop {
+@keyframes droptop {
   from {
     top: -300px;
     opacity: 0; }
