@@ -1,4 +1,4 @@
-Frontend code of Lattice Protocol.
+Frontend code of Blockchain based Website.
 
 Steps to run code:
 Commands to execute in folder terminal.
